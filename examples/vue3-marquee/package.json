@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@selemondev/vue3-marquee": "workspace:^",
+    "@selemondev/vue3-marquee": "0.0.1",
     "@wdns/vue-code-block": "^2.3.1",
     "vue": "^3.4.15"
   },
