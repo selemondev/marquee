@@ -1,0 +1,8 @@
+node_modules
+*.log
+.output
+dist
+.DS_Store
+.history
+.env
+.netlify
