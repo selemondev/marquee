@@ -19,6 +19,52 @@ importers:
         specifier: ^9.3.0
         version: 9.3.0
 
+  examples/vue3-marquee:
+    dependencies:
+      '@selemondev/vue3-marquee':
+        specifier: workspace:^
+        version: link:../../packages/vue3-marquee
+      '@wdns/vue-code-block':
+        specifier: ^2.3.1
+        version: 2.3.1(typescript@5.3.3)
+      vue:
+        specifier: ^3.4.15
+        version: 3.4.15(typescript@5.3.3)
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.2
+        version: 20.1.2
+      '@types/node':
+        specifier: ^20.11.10
+        version: 20.11.16
+      '@vitejs/plugin-vue':
+        specifier: ^5.0.3
+        version: 5.0.3(vite@5.0.12)(vue@3.4.15)
+      '@vue/tsconfig':
+        specifier: ^0.5.1
+        version: 0.5.1
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.17(postcss@8.4.33)
+      npm-run-all2:
+        specifier: ^6.1.1
+        version: 6.1.1
+      postcss:
+        specifier: ^8.4.33
+        version: 8.4.33
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
+      typescript:
+        specifier: ~5.3.0
+        version: 5.3.3
+      vite:
+        specifier: ^5.0.11
+        version: 5.0.12(@types/node@20.11.16)
+      vue-tsc:
+        specifier: ^1.8.27
+        version: 1.8.27(typescript@5.3.3)
+
   packages/vue3-marquee:
     dependencies:
       tailwindcss-animate:
