@@ -96,7 +96,16 @@ const reducedMotionSnippet = ref(`<Marquee class="py-4 motion-reduce:overflow-au
   <div>Content 2</div>
   <div>Content 3</div>
 </Marquee>`
-)
+);
+
+const nuxtPluginSnippet = ref(`
+// plugins/marquee.ts
+
+import { Marquee } from "@selemondev/vue3-marquee";
+import "@selemondev/vue3-marquee/dist/style.css"
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.component('Marquee', Marquee)
+})`)
 </script>
 
 <template>
@@ -166,6 +175,12 @@ const reducedMotionSnippet = ref(`<Marquee class="py-4 motion-reduce:overflow-au
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a local component</h3>
         <VCodeBlock :code="localImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+      </div>
+
+      <div class="space-y-1">
+        <h3 class="font-semibold">Nuxt 3</h3>
+        <p class="text-sm">If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:</p>
+        <VCodeBlock :code="nuxtPluginSnippet" highlightjs lang="typescript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
