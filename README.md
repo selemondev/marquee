@@ -35,6 +35,19 @@ import { Marquee } from "@selemondev/vue3-marquee";
 import "@selemondev/vue3-marquee/dist/style.css"
 ```
 
+## Nuxt
+
+If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:
+
+```ts
+// plugins/marquee.ts
+
+import { Marquee } from "@selemondev/vue3-marquee";
+import "@selemondev/vue3-marquee/dist/style.css"
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.component('Marquee', Marquee)
+})
+```
 
 ## Usage
 
