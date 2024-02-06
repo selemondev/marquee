@@ -7,7 +7,7 @@
   "module": "./dist/vue3-marquee.es.js",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/vue3-marquee.es.js",
       "require": "./dist/vue3-marquee.umd.js"
     },
