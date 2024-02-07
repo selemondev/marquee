@@ -1,6 +1,6 @@
 {
   "name": "@selemondev/marquee",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "A Beautiful Marquee component for Vue",
   "repository": {
     "type": "git",
@@ -22,9 +22,6 @@
   ],
   "author": "Selemondev",
   "license": "ISC",
-  "devDependencies": {
-    "bumpp": "^9.3.0"
-  },
   "dependencies": {
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.1"

@@ -1,6 +1,6 @@
 {
   "name": "@selemondev/vue3-marquee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "main": "./dist/vue3-marquee.umd.js",
