@@ -1,46 +1,81 @@
-# vue3-marquee
+<div align="center">
 
-This template should help get you started developing with Vue 3 in Vite.
+# Marquee <br> 🌬️
 
-## Recommended IDE Setup
+> A beautiful marquee component for Vue.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+</div>
 
-## Type Support for `.vue` Imports in TS
+## Installation
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```bash
+npm install @selemondev/vue3-marquee
+```
+or you can skip npm install, and just copy and paste the source code into your component like Shadcn Vue (don't forget to also copy the tailwind config if you do this).
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Register it as a global component
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```js
+import { Marquee } from "@selemondev/vue3-marquee";
+import "@selemondev/vue3-marquee/dist/style.css"
+import { createApp } from 'vue'
+import App from './App.vue'
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+const app = createApp(App);
+app.component('Marquee', Marquee)
+app.mount('#app')
 ```
 
-### Compile and Hot-Reload for Development
+or 
 
-```sh
-npm run dev
+## Register it as a local component
+
+```js
+import { Marquee } from "@selemondev/vue3-marquee";
+import "@selemondev/vue3-marquee/dist/style.css"
 ```
 
-### Type-Check, Compile and Minify for Production
+## Nuxt
 
-```sh
-npm run build
+If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:
+
+```ts
+// plugins/marquee.ts
+
+import { Marquee } from "@selemondev/vue3-marquee";
+import "@selemondev/vue3-marquee/dist/style.css"
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.component('Marquee', Marquee)
+})
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Usage
 
-```sh
-npm run lint
+The library has a few props that are self-explanatory; you can get it running in no time. See the web examples for more details.
+
+```js
+<Marquee
+  :fade="true"
+  direction="left"
+  :reverse="false"
+  :pauseOnHover="false"
+  className="" // pass class to change gap or speed
+  innerClassName="" // pass class to change gap or speed
+>
+  <div>Content 1</div>
+  <div>Content 2</div>
+  <div>Content 3</div>
+  <div>Content 4</div>
+</Marquee>
 ```
+
+This library is made specifically for Tailwind users, however you can also use vanilla CSS classes to override the gap.
+
+## Credits
+
+- Inspired by [@devnomic's](https://github.com/devnomic) React Marquee component.
+
+## License
+
+Released under [MIT](/LICENSE) by [@selemondev](https://github.com/selemondev).
+
