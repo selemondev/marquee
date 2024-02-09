@@ -2,7 +2,7 @@
 
 # Marquee <br> 🌬️
 
-> A beautiful marquee component for Vue.
+> A beautiful marquee component for Vue ✨.
 
 </div>
 
