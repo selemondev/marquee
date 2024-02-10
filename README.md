@@ -51,7 +51,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 ## Usage
 
-The library has a few props that are self-explanatory; you can get it running in no time. See the web examples for more details.
+The library has a few props that are self-explanatory, you can get it running in no time. See the web examples for more details.
 
 ```js
 <Marquee
