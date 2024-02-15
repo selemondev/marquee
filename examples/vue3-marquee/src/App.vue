@@ -84,7 +84,7 @@ const verticalCodeSnippet = ref(`<Marquee class="h-[400px]" direction="up" :fade
 </Marquee>`
 );
 
-const customGapAndSpeedSnippet = ref(`<Marquee class="gap-[3rem] [--duration:5s]" innerClassName="gap-[3rem] [--gap:3rem]" :fade="true">
+const customGapAndSpeedSnippet = ref(`<Marquee class="gap-[3rem] [--duration:5s] [--gap:3rem]" innerClassName="gap-[3rem]" :fade="true">
   <div>Content 1</div>
   <div>Content 2</div>
   <div>Content 3</div>
@@ -243,7 +243,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       <hr class="border-stone-200" />
       <div class="space-y-1 ">
         <h3 class="font-semibold">Custom gap and speed</h3>
-        <Marquee class="gap-[3rem] [--duration:10s] py-4" innerClassName="gap-[3rem] [--gap:3rem]" :fade="true">
+        <Marquee class="gap-[3rem] [--duration:5s] [--gap:3rem]" innerClassName="gap-[3rem]" :fade="true">
           <div v-for="testimonial in testimonials" :key="testimonial.name">
             <Card :avatar="testimonial.avatar" :name="testimonial.name" :title="testimonial.title"
               :content="testimonial.content" />
@@ -258,8 +258,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       <div class="space-y-1">
         <h3 class="font-semibold">Reduced motion</h3>
         <div>Disable animation when user device prefers reduced motion.</div>
-        <Marquee class="py-4 motion-reduce:overflow-auto"
-          innerclass="motion-reduce:animate-none motion-reduce:first:hidden">
+        <Marquee class="py-4 motion-reduce:overflow-auto" innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
           <div v-for="testimonial in testimonials" :key="testimonial.name">
             <Card :avatar="testimonial.avatar" :name="testimonial.name" :title="testimonial.title"
               :content="testimonial.content" />

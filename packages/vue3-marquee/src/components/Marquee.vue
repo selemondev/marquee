@@ -19,11 +19,17 @@ const props = withDefaults(defineProps<{
 const attrs = useAttrs();
 </script>
 
+<script lang="ts">
+export default {
+    name: 'Marquee',
+    inheritAttrs: false
+}
+</script>
 <template>
-    <div v-bind="attrs"  :class="cn('group flex gap-[1rem] overflow-hidden', {
+    <div :class="cn('group flex gap-[1rem] overflow-hidden', {
         'flex-row': props.direction === 'left',
         'flex-col': props.direction !== 'left',
-    })" :style="{
+    }, attrs && attrs.class )" :style="{
     maskImage: props.fade
         ? `linear-gradient(${props.direction === 'left' ? 'to right' : 'to bottom'
         }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
