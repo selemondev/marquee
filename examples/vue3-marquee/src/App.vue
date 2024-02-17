@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import Card from "./components/Card.vue";
 import GithubIcon from "./components/icons/GithubIcon.vue"
+import CodeBlock from "./components/CodeBlock.vue";
 interface TestimonialProps {
   name: string,
   title: string,
@@ -150,7 +151,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h2 class="text-lg font-semibold">Installation</h2>
-        <VCodeBlock :code="installCmd" highlightjs lang="bash" theme="atom-one-light" />
+        <CodeBlock :code="installCmd" lang="bash" />
         <div class="text-sm">
           or you can skip npm install, and just copy and paste the source code
           into your component like
@@ -162,25 +163,25 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a global component</h3>
-        <VCodeBlock :code="globalImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="globalImportSnippet" lang="javascript" />
       </div>
 
       <div class="flex items-center space-x-2">
         <span class="w-full h-px bg-gray-200"></span>
         <span>or</span>
         <span class="w-full h-px bg-gray-200"></span>
-        
+
       </div>
 
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a local component</h3>
-        <VCodeBlock :code="localImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="localImportSnippet" lang="javascript" />
       </div>
 
       <div class="space-y-1">
         <h3 class="font-semibold">Nuxt 3</h3>
         <p class="text-sm">If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:</p>
-        <VCodeBlock :code="nuxtPluginSnippet" highlightjs lang="typescript" theme="atom-one-light" />
+        <CodeBlock :code="nuxtPluginSnippet" lang="typescript" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -194,7 +195,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="fadeCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="fadeCodeSnippet" lang="vue" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -208,7 +209,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="reverseCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="reverseCodeSnippet" lang="vue" />
       </div>
       <hr class="border-stone-200" />
       <div>
@@ -222,7 +223,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div>
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="pauseOnHoverSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="pauseOnHoverSnippet" lang="vue" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -238,7 +239,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="verticalCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="verticalCodeSnippet" lang="vue" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1 ">
@@ -252,13 +253,14 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="customGapAndSpeedSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="customGapAndSpeedSnippet" lang="vue" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
         <h3 class="font-semibold">Reduced motion</h3>
         <div>Disable animation when user device prefers reduced motion.</div>
-        <Marquee class="py-4 motion-reduce:overflow-auto" innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
+        <Marquee class="py-4 motion-reduce:overflow-auto"
+          innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
           <div v-for="testimonial in testimonials" :key="testimonial.name">
             <Card :avatar="testimonial.avatar" :name="testimonial.name" :title="testimonial.title"
               :content="testimonial.content" />
@@ -267,7 +269,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="reducedMotionSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="reducedMotionSnippet" lang="vue" />
       </div>
     </div>
   </div>
