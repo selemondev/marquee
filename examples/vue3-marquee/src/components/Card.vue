@@ -5,7 +5,7 @@ const props = defineProps<{
     avatar: string,
     title: string,
     content: string
-}>();
+}>()
 </script>
 
 <template>
