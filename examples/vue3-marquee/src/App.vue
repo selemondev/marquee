@@ -2,7 +2,6 @@
 import { ref } from "vue";
 import Card from "./components/Card.vue";
 import GithubIcon from "./components/icons/GithubIcon.vue"
-import CodeBlock from "./components/CodeBlock.vue";
 interface TestimonialProps {
   name: string,
   title: string,
@@ -151,7 +150,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h2 class="text-lg font-semibold">Installation</h2>
-        <CodeBlock :code="installCmd" lang="bash" />
+        <VCodeBlock :code="installCmd" highlightjs lang="bash" theme="atom-one-light" />
         <div class="text-sm">
           or you can skip npm install, and just copy and paste the source code
           into your component like
@@ -163,7 +162,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a global component</h3>
-        <CodeBlock :code="globalImportSnippet" lang="javascript" />
+        <VCodeBlock :code="globalImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
 
       <div class="flex items-center space-x-2">
@@ -175,13 +174,13 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a local component</h3>
-        <CodeBlock :code="localImportSnippet" lang="javascript" />
+        <VCodeBlock :code="localImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
 
       <div class="space-y-1">
         <h3 class="font-semibold">Nuxt 3</h3>
         <p class="text-sm">If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:</p>
-        <CodeBlock :code="nuxtPluginSnippet" lang="typescript" />
+        <VCodeBlock :code="nuxtPluginSnippet" highlightjs lang="typescript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -195,7 +194,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="fadeCodeSnippet" lang="vue" />
+        <VCodeBlock :code="fadeCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -209,7 +208,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="reverseCodeSnippet" lang="vue" />
+        <VCodeBlock :code="reverseCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div>
@@ -223,7 +222,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div>
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="pauseOnHoverSnippet" lang="vue" />
+        <VCodeBlock :code="pauseOnHoverSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -239,7 +238,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="verticalCodeSnippet" lang="vue" />
+        <VCodeBlock :code="verticalCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1 ">
@@ -253,7 +252,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="customGapAndSpeedSnippet" lang="vue" />
+        <VCodeBlock :code="customGapAndSpeedSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -269,7 +268,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="reducedMotionSnippet" lang="vue" />
+        <VCodeBlock :code="reducedMotionSnippet" highlightjs lang="javascript" theme="atom-one-light" />
       </div>
     </div>
   </div>
