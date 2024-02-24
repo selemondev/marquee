@@ -17,9 +17,6 @@ importers:
 
   examples/vue3-marquee:
     dependencies:
-      '@selemondev/vue3-marquee':
-        specifier: workspace:^
-        version: link:../../packages/vue3-marquee
       '@wdns/vue-code-block':
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.3.3)
