@@ -27,9 +27,9 @@ export default {
 </script>
 <template>
     <div :class="cn('group flex gap-[1rem] overflow-hidden', {
-        'flex-row': props.direction === 'left',
-        'flex-col': props.direction !== 'left',
-    }, attrs && attrs.class )" :style="{
+        'marquee-flex-row': props.direction === 'left',
+        'marquee-flex-column': props.direction !== 'left',
+    }, attrs && attrs.class)" :style="{
     maskImage: props.fade
         ? `linear-gradient(${props.direction === 'left' ? 'to right' : 'to bottom'
         }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
@@ -41,7 +41,7 @@ export default {
 }">
         <div v-for="(_, i) in Array(props.numberOfCopies).fill(0)" :key="i">
             <div :class="cn('flex justify-around gap-[1rem] [--gap:1rem] shrink-0',
-                props.direction === 'left' ? 'animate-marquee-left flex-row' : 'animate-marquee-up flex-col', props.pauseOnHover && 'group-hover:[animation-play-state:paused]',
+                props.direction === 'left' ? 'animate-marquee-left marquee-flex-row' : 'animate-marquee-up marquee-flex-column', props.pauseOnHover && 'group-hover:[animation-play-state:paused]',
                 props.reverse && 'direction-reverse',
                 props.innerClassName
             )">
@@ -50,3 +50,15 @@ export default {
         </div>
     </div>
 </template>
+
+<style scoped>
+.marquee-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.marquee-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+</style>

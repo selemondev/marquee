@@ -169,7 +169,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         <span class="w-full h-px bg-gray-200"></span>
         <span>or</span>
         <span class="w-full h-px bg-gray-200"></span>
-        
+
       </div>
 
       <div class="space-y-1">
@@ -258,7 +258,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       <div class="space-y-1">
         <h3 class="font-semibold">Reduced motion</h3>
         <div>Disable animation when user device prefers reduced motion.</div>
-        <Marquee class="py-4 motion-reduce:overflow-auto" innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
+        <Marquee class="py-4 motion-reduce:overflow-auto"
+          innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
           <div v-for="testimonial in testimonials" :key="testimonial.name">
             <Card :avatar="testimonial.avatar" :name="testimonial.name" :title="testimonial.title"
               :content="testimonial.content" />
