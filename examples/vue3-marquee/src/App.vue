@@ -109,7 +109,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 </script>
 
 <template>
-  <div class="w-screen min-h-screen bg-stone-100/90">
+  <div class="min-h-screen bg-stone-100/90">
     <div class="max-w-screen-lg px-4 py-6 mx-auto space-y-4">
       <div class="space-y-2 md:flex md:justify-between">
         <div>
