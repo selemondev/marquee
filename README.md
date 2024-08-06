@@ -11,7 +11,7 @@
 ```bash
 npm install @selemondev/vue3-marquee
 ```
-or you can skip npm install, and just copy and paste the source code into your component like Shadcn Vue (don't forget to also copy the tailwind config if you do this).
+or you can skip the npm install, and just copy and paste the source code into your component like Shadcn Vue (don't forget to also copy the tailwind config if you do this).
 
 ## Register it as a global component
 
