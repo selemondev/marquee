@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@selemondev/vue3-marquee": "0.0.8",
-    "@wdns/vue-code-block": "^2.3.1",
     "vue": "^3.4.15"
   },
   "devDependencies": {
