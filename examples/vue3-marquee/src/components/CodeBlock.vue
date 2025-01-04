@@ -9,8 +9,8 @@ const props = defineProps<{
 
 const codeToHtml = ref('');
 
-watch(props, async (val: { code: string, lang: string, theme: string}) => {
-    if(val) {
+watch(props, async (val: { code: string, lang: string, theme: string }) => {
+    if (val) {
         return codeToHtml.value = await convertCodeToHtml(val.code, val.lang, val.theme)
     }
 }, {
@@ -19,5 +19,9 @@ watch(props, async (val: { code: string, lang: string, theme: string}) => {
 </script>
 
 <template>
-    <div v-html="codeToHtml"/>
+    <div v-html="codeToHtml" />
 </template>
+
+<style>
+
+</style>
