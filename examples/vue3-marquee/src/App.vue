@@ -1,111 +1,9 @@
 <script setup lang='ts'>
-import { ref } from "vue";
 import Card from "./components/Card.vue";
 import GithubIcon from "./components/icons/GithubIcon.vue"
-interface TestimonialProps {
-  name: string,
-  title: string,
-  avatar: string,
-  content: string
-}
-const testimonials: TestimonialProps[] = [
-  {
-    name: "Selemondev",
-    title: "Senior Frontend Developer",
-    avatar: "https://github.com/selemondev.png",
-    content:
-      "Marquee Library has been a game-changer for our TypeScript projects. Its seamless integration and robust features have significantly improved our UI's dynamic capabilities.",
-  },
-  {
-    name: "Raj Patel",
-    title: "Tech Lead",
-    avatar: "https://i.pravatar.cc/150?img=18",
-    content:
-      "I'm thoroughly impressed with Marquee's performance and ease of use. It made implementing complex scrolling texts a breeze, and the support for TypeScript is top-notch.",
-  },
-  {
-    name: "Sofia Garcia",
-    title: "UI/UX Designer",
-    avatar: "https://i.pravatar.cc/150?img=45",
-    content:
-      "As a designer, I appreciate how Marquee enhances the visual appeal of our applications. The flexibility it offers in styling and animation is fantastic.",
-  },
-  {
-    name: "John Mack",
-    title: "Full Stack Developer",
-    avatar: "https://i.pravatar.cc/150?img=60",
-    content:
-      "Integrating Marquee into our full-stack TypeScript projects has been incredibly efficient. Its compatibility and ease of customization are ideal for our diverse project needs.",
-  },
-  {
-    name: "Isabella Smith",
-    title: "Project Manager",
-    avatar: "https://i.pravatar.cc/150?img=32",
-    content:
-      "Marquee Library has consistently delivered beyond our expectations. It's not just a tool; it's an asset that enhances productivity and creativity in our TypeScript applications.",
-  },
-];
-const installCmd = ref(`npm install @selemondev/vue3-marquee`);
-const globalImportSnippet = ref(`import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
-import { createApp } from 'vue'
-import App from './App.vue'
-
-const app = createApp(App);
-app.component('Marquee', Marquee)
-app.mount('#app')`)
-
-const localImportSnippet = ref(`import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"`);
-
-const fadeCodeSnippet = ref(`<Marquee :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`);
-
-const reverseCodeSnippet = ref(`<Marquee :reverse="true" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`);
-
-const pauseOnHoverSnippet = ref(`<Marquee :pauseOnHover="true" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`
-);
-
-const verticalCodeSnippet = ref(`<Marquee class="h-[400px]" direction="up" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`
-);
-
-const customGapAndSpeedSnippet = ref(`<Marquee class="gap-[3rem] [--duration:5s] [--gap:3rem]" innerClassName="gap-[3rem]" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`
-);
-
-const reducedMotionSnippet = ref(`<Marquee class="py-4 motion-reduce:overflow-auto" innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>`
-);
-
-const nuxtPluginSnippet = ref(`
-// plugins/marquee.ts
-
-import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
-export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.component('Marquee', Marquee)
-})`)
+import CodeBlock from "./components/CodeBlock.vue";
+import { testimonials } from "./utils/testimonials";
+import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet, fadeCodeSnippet, reverseCodeSnippet, pauseOnHoverSnippet, verticalCodeSnippet, customGapAndSpeedSnippet, reducedMotionSnippet  } from "./utils/snippets";
 </script>
 
 <template>
@@ -150,7 +48,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h2 class="text-lg font-semibold">Installation</h2>
-        <VCodeBlock :code="installCmd" highlightjs lang="bash" theme="atom-one-light" />
+        <CodeBlock :code="installCmd" lang="bash" theme="vitesse-light" />
         <div class="text-sm">
           or you can skip npm install, and just copy and paste the source code
           into your component like
@@ -162,7 +60,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a global component</h3>
-        <VCodeBlock :code="globalImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="globalImportSnippet" lang="javascript" theme="vitesse-light" />
       </div>
 
       <div class="flex items-center space-x-2">
@@ -174,13 +72,13 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       <div class="space-y-1">
         <h3 class="font-semibold">Register it as a local component</h3>
-        <VCodeBlock :code="localImportSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="localImportSnippet" lang="javascript" theme="vitesse-light" />
       </div>
 
       <div class="space-y-1">
         <h3 class="font-semibold">Nuxt 3</h3>
         <p class="text-sm">If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown below:</p>
-        <VCodeBlock :code="nuxtPluginSnippet" highlightjs lang="typescript" theme="atom-one-light" />
+        <CodeBlock :code="nuxtPluginSnippet" lang="javascript" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -194,7 +92,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="fadeCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="fadeCodeSnippet" lang="html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -208,7 +106,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="reverseCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="reverseCodeSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div>
@@ -222,7 +120,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div>
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="pauseOnHoverSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="pauseOnHoverSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -238,7 +136,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="verticalCodeSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="verticalCodeSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1 ">
@@ -252,7 +150,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="customGapAndSpeedSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="customGapAndSpeedSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -268,8 +166,18 @@ export default defineNuxtPlugin((nuxtApp) => {
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <VCodeBlock :code="reducedMotionSnippet" highlightjs lang="javascript" theme="atom-one-light" />
+        <CodeBlock :code="reducedMotionSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
     </div>
   </div>
 </template>
+
+<style>
+pre {
+  padding: 15px;
+  border-radius: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+</style>
