@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@selemondev/vue3-marquee": "0.0.8",
+    "hastscript": "^9.0.0",
     "vue": "^3.4.15"
   },
   "devDependencies": {

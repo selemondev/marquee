@@ -92,7 +92,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
       </div>
       <div class="space-y-1">
         <h3 class="font-semibold">Code</h3>
-        <CodeBlock :code="fadeCodeSnippet" lang="html" theme="vitesse-light" />
+        <CodeBlock :code="fadeCodeSnippet" lang="vue-html" theme="vitesse-light" />
       </div>
       <hr class="border-stone-200" />
       <div class="space-y-1">
@@ -178,6 +178,7 @@ pre {
   border-radius: 10px;
   overflow: scroll;
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
+  position: relative;
 }
 </style>
