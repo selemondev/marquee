@@ -23,8 +23,8 @@
   "author": "Selemondev",
   "license": "ISC",
   "dependencies": {
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.1"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0"
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "packageManager": "pnpm@9.15.4"
 }
