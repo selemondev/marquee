@@ -85,9 +85,9 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
       </div>
 
       <div class="flex items-center space-x-2">
-        <span class="w-full h-px bg-gray-200"></span>
+        <span class="w-full h-px bg-gray-300"></span>
         <span>or</span>
-        <span class="w-full h-px bg-gray-200"></span>
+        <span class="w-full h-px bg-gray-300"></span>
 
       </div>
 
@@ -121,7 +121,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div class="space-y-1">
         <h3 class="font-semibold">Fade</h3>
         <Marquee :fade="true">
@@ -145,7 +145,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div class="space-y-1">
         <h3 class="font-semibold">Reverse direction</h3>
         <Marquee :reverse="true" :fade="true">
@@ -169,7 +169,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div>
         <h3 class="font-semibold">Pause on hover</h3>
         <Marquee :pauseOnHover="true" :fade="true">
@@ -193,7 +193,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div class="space-y-1">
         <h3 class="font-semibold">Vertical</h3>
         <div class="flex justify-center">
@@ -219,7 +219,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div class="space-y-1 ">
         <h3 class="font-semibold">Custom gap and speed</h3>
         <Marquee class="gap-[3rem] [--duration:5s] [--gap:3rem]" innerClassName="gap-[3rem]" :fade="true">
@@ -243,7 +243,7 @@ import { installCmd, globalImportSnippet, localImportSnippet, nuxtPluginSnippet,
           })
         ]" />
       </div>
-      <hr class="border-stone-200" />
+      <hr class="border-gray-300" />
       <div class="space-y-1">
         <h3 class="font-semibold">Reduced motion</h3>
         <div>Disable animation when user device prefers reduced motion.</div>
