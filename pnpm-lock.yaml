@@ -24,8 +24,8 @@ importers:
         specifier: 0.0.8
         version: 0.0.8(tailwindcss@3.4.17)(typescript@5.3.3)
       hastscript:
-        specifier: ^9.0.0
-        version: 9.0.0
+        specifier: ^9.0.1
+        version: 9.0.1
       shiki-code-block-vue:
         specifier: ^0.0.5
         version: 0.0.5(@vue/tsconfig@0.7.0(typescript@5.3.3)(vue@3.5.13(typescript@5.3.3)))(shiki@1.28.0)(vue-tsc@2.2.0(typescript@5.3.3))(vue@3.5.13(typescript@5.3.3))
@@ -873,8 +873,8 @@ packages:
   hast-util-whitespace@3.0.0:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
 
-  hastscript@9.0.0:
-    resolution: {integrity: sha512-jzaLBGavEDKHrc5EfFImKN7nZKKBdSLIdGvCwDZ9TfzbF2ffXiov8CKE445L2Z1Ek2t/m4SKQ2j6Ipv7NyUolw==}
+  hastscript@9.0.1:
+    resolution: {integrity: sha512-g7df9rMFX/SPi34tyGCyUBREQoKkapwdY/T04Qn9TDWfHhAYt4/I0gMVirzK5wEzeUqIjEB+LXC/ypb7Aqno5w==}
 
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
@@ -1148,6 +1148,9 @@ packages:
 
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
+
+  property-information@7.1.0:
+    resolution: {integrity: sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ==}
 
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
@@ -1747,7 +1750,7 @@ snapshots:
 
   '@selemondev/shiki-transformer-copy-button@0.0.2':
     dependencies:
-      hastscript: 9.0.0
+      hastscript: 9.0.1
 
   '@selemondev/vue3-marquee@0.0.8(tailwindcss@3.4.17)(typescript@5.3.3)':
     dependencies:
@@ -2208,12 +2211,12 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  hastscript@9.0.0:
+  hastscript@9.0.1:
     dependencies:
       '@types/hast': 3.0.4
       comma-separated-tokens: 2.0.3
       hast-util-parse-selector: 4.0.0
-      property-information: 6.5.0
+      property-information: 7.1.0
       space-separated-tokens: 2.0.2
 
   he@1.2.0: {}
@@ -2445,6 +2448,8 @@ snapshots:
       source-map-js: 1.2.1
 
   property-information@6.5.0: {}
+
+  property-information@7.1.0: {}
 
   punycode@2.3.1: {}
 

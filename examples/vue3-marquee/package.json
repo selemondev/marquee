@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@selemondev/vue3-marquee": "0.0.8",
-    "hastscript": "^9.0.0",
+    "hastscript": "^9.0.1",
     "shiki-code-block-vue": "^0.0.5",
     "@selemondev/shiki-transformer-copy-button": "^0.0.2",
     "vue": "^3.4.15"
