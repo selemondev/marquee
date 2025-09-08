@@ -22,7 +22,7 @@ importers:
         version: 0.0.2
       '@selemondev/vue3-marquee':
         specifier: 0.0.8
-        version: 0.0.8(tailwindcss@4.1.12)(typescript@5.3.3)
+        version: 0.0.8(tailwindcss@4.1.13)(typescript@5.3.3)
       hastscript:
         specifier: ^9.0.1
         version: 9.0.1
@@ -61,8 +61,8 @@ importers:
         specifier: ^3.12.2
         version: 3.12.2
       tailwindcss:
-        specifier: ^4.1.12
-        version: 4.1.12
+        specifier: ^4.1.13
+        version: 4.1.13
       typescript:
         specifier: ~5.3.0
         version: 5.3.3
@@ -77,7 +77,7 @@ importers:
     dependencies:
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.1.12)
+        version: 1.0.7(tailwindcss@4.1.13)
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.3.3)
@@ -104,8 +104,8 @@ importers:
         specifier: ^8.5.6
         version: 8.5.6
       tailwindcss:
-        specifier: ^4.1.12
-        version: 4.1.12
+        specifier: ^4.1.13
+        version: 4.1.13
       typescript:
         specifier: ~5.3.3
         version: 5.3.3
@@ -1067,8 +1067,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@4.1.12:
-    resolution: {integrity: sha512-DzFtxOi+7NsFf7DBtI3BJsynR+0Yp6etH+nRPTbpWnS2pZBaSksv/JGctNwSWzbFjp0vxSqknaUylseZqMDGrA==}
+  tailwindcss@4.1.13:
+    resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
 
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
@@ -1491,9 +1491,9 @@ snapshots:
     dependencies:
       hastscript: 9.0.1
 
-  '@selemondev/vue3-marquee@0.0.8(tailwindcss@4.1.12)(typescript@5.3.3)':
+  '@selemondev/vue3-marquee@0.0.8(tailwindcss@4.1.13)(typescript@5.3.3)':
     dependencies:
-      tailwindcss-animate: 1.0.7(tailwindcss@4.1.12)
+      tailwindcss-animate: 1.0.7(tailwindcss@4.1.13)
       vue: 3.5.13(typescript@5.3.3)
     transitivePeerDependencies:
       - tailwindcss
@@ -2143,11 +2143,11 @@ snapshots:
 
   tailwind-merge@2.6.0: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.1.12):
+  tailwindcss-animate@1.0.7(tailwindcss@4.1.13):
     dependencies:
-      tailwindcss: 4.1.12
+      tailwindcss: 4.1.13
 
-  tailwindcss@4.1.12: {}
+  tailwindcss@4.1.13: {}
 
   tinyglobby@0.2.14:
     dependencies:
