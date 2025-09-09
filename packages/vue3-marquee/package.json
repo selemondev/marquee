@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/vue3-marquee.umd.js",
   "module": "./dist/vue3-marquee.es.js",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@9.15.2",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
