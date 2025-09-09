@@ -1,7 +1,7 @@
 {
   "name": "vue3-marquee",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "packageManager": "pnpm@10.15.1",
   "scripts": {
