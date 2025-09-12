@@ -17,7 +17,7 @@ or you can skip the npm install, and just copy and paste the source code into yo
 
 ```js
 import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
+import "@selemondev/vue3-marquee/dist/index.css"
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -26,7 +26,7 @@ app.component('Marquee', Marquee)
 app.mount('#app')
 ```
 
-or 
+or
 
 ## Register it as a local component
 
@@ -78,4 +78,3 @@ This library is made specifically for Tailwind users, however you can also use v
 ## License
 
 Released under [MIT](/LICENSE) by [@selemondev](https://github.com/selemondev).
-
