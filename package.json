@@ -26,5 +26,8 @@
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0"
   },
-  "packageManager": "pnpm@9.15.2"
+  "packageManager": "pnpm@9.15.2",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1"
+  }
 }
