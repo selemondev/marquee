@@ -16,7 +16,20 @@
 		"dist"
 	],
 	"scripts": {
-		"dev": "pnpm generate:css && tsdown",
+		"build:package": "pnpm generate:css && tsdown",
+		"dev:build": "tsdown --watch ./src/index.ts",
+		"dev": "tsx ./src/index.ts",
+		"play:dev": "vite",
+		"biome": "biome check --write",
+		"test": "vitest",
+		"coverage": "vitest run --coverage",
+		"generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
+		"generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
+		"generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
+		"generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
+		"bump:version": "pnpx changelogen@latest --bump",
+		"package:beta": "pnpm build:package && pnpm publish --tag beta",
+		"package": "pnpm build:package && pnpm publish --access=public",
 		"generate:css": "pnpx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/output.css"
 	},
 	"dependencies": {
