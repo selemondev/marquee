@@ -1,6 +1,6 @@
 {
 	"name": "@selemondev/marquee",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"description": "A Beautiful Marquee component for Vue",
 	"repository": {
 		"type": "git",
