@@ -24,15 +24,26 @@ importers:
       '@selemondev/shiki-transformer-copy-button':
         specifier: ^0.0.2
         version: 0.0.2
+<<<<<<< HEAD
+=======
+      '@selemondev/vue3-marquee':
+        specifier: 0.0.8
+        version: 0.0.8(tailwindcss@4.1.13)(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
       hastscript:
         specifier: ^9.0.1
         version: 9.0.1
       shiki-code-block-vue:
+<<<<<<< HEAD
         specifier: ^0.0.8
         version: 0.0.8(@vue/tsconfig@0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3)))(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1))(vue-tsc@3.0.7(typescript@5.3.3))(vue@3.5.21(typescript@5.3.3))
+=======
+        specifier: ^0.0.5
+        version: 0.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(shiki@3.12.2)(vue-tsc@3.0.6(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
       vue:
         specifier: ^3.4.15
-        version: 3.5.21(typescript@5.3.3)
+        version: 3.5.21(typescript@5.9.2)
     devDependencies:
       '@selemondev/vue3-marquee':
         specifier: ^0.0.8
@@ -44,11 +55,16 @@ importers:
         specifier: ^24.3.1
         version: 24.3.1
       '@vitejs/plugin-vue':
+<<<<<<< HEAD
         specifier: ^6.0.1
         version: 6.0.1(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1))(vue@3.5.21(typescript@5.3.3))
+=======
+        specifier: ^5.0.3
+        version: 5.2.4(vite@7.1.5(@types/node@24.3.1))(vue@3.5.21(typescript@5.9.2))
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3))
+        version: 0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.21(postcss@8.5.6)
@@ -68,20 +84,30 @@ importers:
         specifier: ^4.1.13
         version: 4.1.13
       typescript:
-        specifier: ~5.3.0
-        version: 5.3.3
+        specifier: ~5.9.2
+        version: 5.9.2
       vite:
         specifier: ^7.1.5
         version: 7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1)
       vue-tsc:
         specifier: ^3.0.6
+<<<<<<< HEAD
         version: 3.0.7(typescript@5.3.3)
+=======
+        version: 3.0.6(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
   packages/vue3-marquee:
     dependencies:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.1.13)
+<<<<<<< HEAD
+=======
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.21(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
     devDependencies:
       '@tailwindcss/cli':
         specifier: ^4.1.13
@@ -92,9 +118,15 @@ importers:
       '@types/node':
         specifier: ^24.3.1
         version: 24.3.1
+<<<<<<< HEAD
+=======
+      '@vitejs/plugin-vue':
+        specifier: ^4.6.2
+        version: 4.6.2(vite@7.1.5(@types/node@24.3.1))(vue@3.5.21(typescript@5.9.2))
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3))
+        version: 0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.21(postcss@8.5.6)
@@ -111,6 +143,7 @@ importers:
         specifier: ^0.15.1
         version: 0.15.1(typescript@5.3.3)(unplugin-lightningcss@0.4.2)(vue-tsc@3.0.7(typescript@5.3.3))
       typescript:
+<<<<<<< HEAD
         specifier: ~5.3.3
         version: 5.3.3
       unplugin-lightningcss:
@@ -128,6 +161,19 @@ importers:
       vue-tsc:
         specifier: ^3.0.6
         version: 3.0.7(typescript@5.3.3)
+=======
+        specifier: ~5.9.2
+        version: 5.9.2
+      vite:
+        specifier: ^7.1.5
+        version: 7.1.5(@types/node@24.3.1)
+      vite-plugin-dts:
+        specifier: ^4.5.4
+        version: 4.5.4(@types/node@24.3.1)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.3.1))
+      vue-tsc:
+        specifier: ^3.0.6
+        version: 3.0.6(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
 packages:
 
@@ -1406,6 +1452,7 @@ packages:
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
 
+<<<<<<< HEAD
   tsdown@0.15.1:
     resolution: {integrity: sha512-USTr2wS5OIyohR8Sp09rp5mXVwOX4YvVRqarS9I9jIhF+PqgtVSMXG4vBrHGY1OficNcLT5Z75pSoxd2uU+BYg==}
     engines: {node: '>=20.19.0'}
@@ -1433,11 +1480,15 @@ packages:
 
   typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+=======
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.8.2:
-    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
+  typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1906,10 +1957,10 @@ snapshots:
     dependencies:
       hastscript: 9.0.1
 
-  '@selemondev/vue3-marquee@0.0.8(tailwindcss@4.1.13)(typescript@5.3.3)':
+  '@selemondev/vue3-marquee@0.0.8(tailwindcss@4.1.13)(typescript@5.9.2)':
     dependencies:
       tailwindcss-animate: 1.0.7(tailwindcss@4.1.13)
-      vue: 3.5.21(typescript@5.3.3)
+      vue: 3.5.21(typescript@5.9.2)
     transitivePeerDependencies:
       - tailwindcss
       - typescript
@@ -2048,6 +2099,7 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
+<<<<<<< HEAD
   '@vitejs/plugin-vue@6.0.1(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1))(vue@3.5.21(typescript@5.3.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
@@ -2059,6 +2111,17 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.29
       vite: 7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1)
       vue: 3.5.21(typescript@5.8.2)
+=======
+  '@vitejs/plugin-vue@4.6.2(vite@7.1.5(@types/node@24.3.1))(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      vite: 7.1.5(@types/node@24.3.1)
+      vue: 3.5.21(typescript@5.9.2)
+
+  '@vitejs/plugin-vue@5.2.4(vite@7.1.5(@types/node@24.3.1))(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      vite: 7.1.5(@types/node@24.3.1)
+      vue: 3.5.21(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
   '@volar/language-core@2.4.23':
     dependencies:
@@ -2107,7 +2170,24 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
+<<<<<<< HEAD
   '@vue/language-core@3.0.7(typescript@5.3.3)':
+=======
+  '@vue/language-core@2.2.0(typescript@5.9.2)':
+    dependencies:
+      '@volar/language-core': 2.4.23
+      '@vue/compiler-dom': 3.5.21
+      '@vue/compiler-vue2': 2.7.16
+      '@vue/shared': 3.5.21
+      alien-signals: 0.4.14
+      minimatch: 9.0.5
+      muggle-string: 0.4.1
+      path-browserify: 1.0.1
+    optionalDependencies:
+      typescript: 5.9.2
+
+  '@vue/language-core@3.0.6(typescript@5.9.2)':
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
     dependencies:
       '@volar/language-core': 2.4.23
       '@vue/compiler-dom': 3.5.21
@@ -2118,7 +2198,7 @@ snapshots:
       path-browserify: 1.0.1
       picomatch: 4.0.3
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.9.2
 
   '@vue/reactivity@3.5.21':
     dependencies:
@@ -2136,11 +2216,11 @@ snapshots:
       '@vue/shared': 3.5.21
       csstype: 3.1.3
 
-  '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.3.3))':
+  '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.9.2))':
     dependencies:
       '@vue/compiler-ssr': 3.5.21
       '@vue/shared': 3.5.21
-      vue: 3.5.21(typescript@5.3.3)
+      vue: 3.5.21(typescript@5.9.2)
 
   '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.8.2))':
     dependencies:
@@ -2150,10 +2230,10 @@ snapshots:
 
   '@vue/shared@3.5.21': {}
 
-  '@vue/tsconfig@0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3))':
+  '@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))':
     optionalDependencies:
-      typescript: 5.3.3
-      vue: 3.5.21(typescript@5.3.3)
+      typescript: 5.9.2
+      vue: 3.5.21(typescript@5.9.2)
 
   acorn@8.15.0: {}
 
@@ -2626,12 +2706,21 @@ snapshots:
 
   shell-quote@1.8.3: {}
 
+<<<<<<< HEAD
   shiki-code-block-vue@0.0.8(@vue/tsconfig@0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3)))(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1))(vue-tsc@3.0.7(typescript@5.3.3))(vue@3.5.21(typescript@5.3.3)):
     dependencies:
       '@vue/tsconfig': 0.7.0(typescript@5.3.3)(vue@3.5.21(typescript@5.3.3))
       vite: 7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1)
       vue: 3.5.21(typescript@5.3.3)
       vue-tsc: 3.0.7(typescript@5.3.3)
+=======
+  shiki-code-block-vue@0.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(shiki@3.12.2)(vue-tsc@3.0.6(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2)):
+    dependencies:
+      '@vue/tsconfig': 0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
+      shiki: 3.12.2
+      vue: 3.5.21(typescript@5.9.2)
+      vue-tsc: 3.0.6(typescript@5.9.2)
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
   shiki@3.12.2:
     dependencies:
@@ -2687,6 +2776,7 @@ snapshots:
 
   trim-lines@3.0.1: {}
 
+<<<<<<< HEAD
   tsdown@0.15.1(typescript@5.3.3)(unplugin-lightningcss@0.4.2)(vue-tsc@3.0.7(typescript@5.3.3)):
     dependencies:
       ansis: 4.1.0
@@ -2727,6 +2817,13 @@ snapshots:
       defu: 6.1.4
       jiti: 2.5.1
       quansync: 0.2.11
+=======
+  typescript@5.8.2: {}
+
+  typescript@5.9.2: {}
+
+  ufo@1.6.1: {}
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
   undici-types@7.10.0: {}
 
@@ -2805,7 +2902,30 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
+<<<<<<< HEAD
   vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(lightningcss@1.30.1):
+=======
+  vite-plugin-dts@4.5.4(@types/node@24.3.1)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.3.1)):
+    dependencies:
+      '@microsoft/api-extractor': 7.52.11(@types/node@24.3.1)
+      '@rollup/pluginutils': 5.3.0(rollup@4.50.1)
+      '@volar/typescript': 2.4.23
+      '@vue/language-core': 2.2.0(typescript@5.9.2)
+      compare-versions: 6.1.1
+      debug: 4.4.1
+      kolorist: 1.8.0
+      local-pkg: 1.1.2
+      magic-string: 0.30.19
+      typescript: 5.9.2
+    optionalDependencies:
+      vite: 7.1.5(@types/node@24.3.1)
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+
+  vite@7.1.5(@types/node@24.3.1):
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2821,21 +2941,29 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
+<<<<<<< HEAD
   vue-tsc@3.0.7(typescript@5.3.3):
     dependencies:
       '@volar/typescript': 2.4.23
       '@vue/language-core': 3.0.7(typescript@5.3.3)
       typescript: 5.3.3
+=======
+  vue-tsc@3.0.6(typescript@5.9.2):
+    dependencies:
+      '@volar/typescript': 2.4.23
+      '@vue/language-core': 3.0.6(typescript@5.9.2)
+      typescript: 5.9.2
+>>>>>>> 14184d722f17d7aee083436529af41ec52ac1b6e
 
-  vue@3.5.21(typescript@5.3.3):
+  vue@3.5.21(typescript@5.9.2):
     dependencies:
       '@vue/compiler-dom': 3.5.21
       '@vue/compiler-sfc': 3.5.21
       '@vue/runtime-dom': 3.5.21
-      '@vue/server-renderer': 3.5.21(vue@3.5.21(typescript@5.3.3))
+      '@vue/server-renderer': 3.5.21(vue@3.5.21(typescript@5.9.2))
       '@vue/shared': 3.5.21
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.9.2
 
   vue@3.5.21(typescript@5.8.2):
     dependencies:
