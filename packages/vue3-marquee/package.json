@@ -8,7 +8,8 @@
 	"packageManager": "pnpm@9.15.9",
 	"exports": {
 		".": "./dist/index.js",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./dist/index.css": "./dist/index.css"
 	},
 	"types": "./dist/index.d.ts",
 	"files": [
@@ -19,6 +20,7 @@
 		"generate:css": "pnpx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/output.css"
 	},
 	"dependencies": {
+		"@selemondev/vue3-marquee": "^0.0.8",
 		"tailwindcss-animate": "^1.0.7"
 	},
 	"peerDependencies": {

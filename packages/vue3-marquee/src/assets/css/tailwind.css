@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin 'tailwindcss-animate';
 
 @theme {
 	--animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;

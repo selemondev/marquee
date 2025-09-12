@@ -11,5 +11,4 @@ export default defineConfig({
 	target: "chrome100",
 	platform: "browser",
 	plugins: [Vue({ isProduction: true })],
-	exports: true,
 });
