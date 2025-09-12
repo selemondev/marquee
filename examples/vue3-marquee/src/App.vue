@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Card from "./components/Card.vue";
 import GithubIcon from "./components/icons/GithubIcon.vue";
-import CodeBlock from "shiki-code-block-vue";
+import CodeBlock from "shiki-block-vue";
 import { transformerCopyButton } from "@selemondev/shiki-transformer-copy-button";
 import { testimonials } from "./utils/testimonials";
 import Marquee from "@selemondev/vue3-marquee";
