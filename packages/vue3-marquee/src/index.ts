@@ -1,3 +1,3 @@
 import { Marquee } from "./components";
-import './assets/css/tailwind.css'
-export default Marquee
+import "./assets/css/output.css";
+export default Marquee;
