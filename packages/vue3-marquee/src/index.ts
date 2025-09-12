@@ -1,5 +1,3 @@
-import Marquee from "./components/Marquee.vue"
+import { Marquee } from "./components";
 import './assets/css/tailwind.css'
-export {
-    Marquee
-}
+export default Marquee
