@@ -1,33 +1,33 @@
 {
-  "name": "@selemondev/marquee",
-  "version": "0.0.7",
-  "description": "A Beautiful Marquee component for Vue",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/selemondev/marquee"
-  },
-  "bugs": {
-    "url": "https://github.com/selemondev/marquee/issues",
-    "email": "selemonsrdev@gmail.com"
-  },
-  "scripts": {
-    "release": "npx changelogen@latest --release"
-  },
-  "keywords": [
-    "vue",
-    "marquee",
-    "tailwindcss",
-    "typescript",
-    "vue3"
-  ],
-  "author": "Selemondev",
-  "license": "ISC",
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.0"
-  },
-  "packageManager": "pnpm@9.15.2",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.1"
-  }
+	"name": "@selemondev/marquee",
+	"version": "0.0.10",
+	"description": "A Beautiful Marquee component for Vue",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/selemondev/marquee"
+	},
+	"bugs": {
+		"url": "https://github.com/selemondev/marquee/issues",
+		"email": "selemonsrdev@gmail.com"
+	},
+	"scripts": {
+		"release": "npx changelogen@latest --release"
+	},
+	"keywords": [
+		"vue",
+		"marquee",
+		"tailwindcss",
+		"typescript",
+		"vue3"
+	],
+	"author": "Selemondev",
+	"license": "ISC",
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"tailwind-merge": "^2.6.0"
+	},
+	"packageManager": "pnpm@9.15.2",
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^6.0.1"
+	}
 }
