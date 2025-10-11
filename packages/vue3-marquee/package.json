@@ -48,7 +48,7 @@
 		"tailwindcss": "^4.1.13",
 		"tsdown": "^0.15.1",
 		"typescript": "~5.9.2",
-		"unplugin-lightningcss": "^0.4.2",
+		"unplugin-lightningcss": "^0.4.3",
 		"unplugin-vue": "^7.0.1",
 		"vite": "^7.1.5",
 		"vue": "^3.5.21",
