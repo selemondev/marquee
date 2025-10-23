@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v0.0.12
+
+[compare changes](https://github.com/selemondev/marquee/compare/v0.0.11...v0.0.12)
+
+### 🩹 Fixes
+
+- **deps:** Update dependency @selemondev/vue3-marquee to ^0.0.10 ([9ef76ce](https://github.com/selemondev/marquee/commit/9ef76ce))
+
+### 🏡 Chore
+
+- Update package.json and lockfile ([fde02ff](https://github.com/selemondev/marquee/commit/fde02ff))
+- Remove marquee dep from it's package.json file ([1f5b29f](https://github.com/selemondev/marquee/commit/1f5b29f))
+- Remove unplugin-lightningcss plugin ([df25cab](https://github.com/selemondev/marquee/commit/df25cab))
+- Refresh lockfile ([10e0f64](https://github.com/selemondev/marquee/commit/10e0f64))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.11
 
 [compare changes](https://github.com/selemondev/marquee/compare/v0.0.10...v0.0.11)
