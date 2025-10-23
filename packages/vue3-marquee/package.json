@@ -1,57 +1,57 @@
 {
-	"name": "@selemondev/vue3-marquee",
-	"version": "0.0.9",
-	"private": false,
-	"type": "module",
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"packageManager": "pnpm@9.15.9",
-	"exports": {
-		".": "./dist/index.js",
-		"./package.json": "./package.json",
-		"./dist/index.css": "./dist/index.css"
-	},
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build:package": "pnpm generate:css && tsdown",
-		"dev:build": "tsdown --watch ./src/index.ts",
-		"dev": "tsx ./src/index.ts",
-		"play:dev": "vite",
-		"biome": "biome check --write",
-		"test": "vitest",
-		"coverage": "vitest run --coverage",
-		"generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
-		"generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
-		"generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
-		"generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
-		"bump:version": "pnpx changelogen@latest --bump",
-		"package:beta": "pnpm build:package && pnpm publish --tag beta",
-		"package": "pnpm build:package && pnpm publish --access=public",
-		"generate:css": "pnpx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/output.css"
-	},
-	"dependencies": {
-		"@selemondev/vue3-marquee": "^0.0.8",
-		"tailwindcss-animate": "^1.0.7"
-	},
-	"peerDependencies": {
-		"vue": "^3.0.0"
-	},
-	"devDependencies": {
-		"@tailwindcss/vite": "^4.0.0",
-		"@tsconfig/node18": "^18.2.4",
-		"@types/node": "^24.5.2",
-		"@vue/tsconfig": "^0.7.0",
-		"npm-run-all2": "^8.0.4",
-		"tailwindcss": "^4.1.13",
-		"tsdown": "^0.15.1",
-		"typescript": "~5.9.2",
-		"unplugin-lightningcss": "^0.4.2",
-		"unplugin-vue": "^7.0.1",
-		"vite": "^7.1.11",
-		"vue": "^3.5.21",
-		"vue-tsc": "^3.0.7"
-	}
+  "name": "@selemondev/vue3-marquee",
+  "version": "0.0.9",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "packageManager": "pnpm@9.15.9",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json",
+    "./dist/index.css": "./dist/index.css"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:package": "pnpm generate:css && tsdown",
+    "dev:build": "tsdown --watch ./src/index.ts",
+    "dev": "tsx ./src/index.ts",
+    "play:dev": "vite",
+    "biome": "biome check --write",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
+    "generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
+    "generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
+    "generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
+    "bump:version": "pnpx changelogen@latest --bump",
+    "package:beta": "pnpm build:package && pnpm publish --tag beta",
+    "package": "pnpm build:package && pnpm publish --access=public",
+    "generate:css": "pnpx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/output.css --minify"
+  },
+  "dependencies": {
+    "@selemondev/vue3-marquee": "^0.0.8",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^24.5.2",
+    "@vue/tsconfig": "^0.7.0",
+    "npm-run-all2": "^8.0.4",
+    "tailwindcss": "^4.1.13",
+    "tsdown": "^0.15.1",
+    "typescript": "~5.9.2",
+    "unplugin-lightningcss": "^0.4.2",
+    "unplugin-vue": "^7.0.1",
+    "vite": "^7.1.11",
+    "vue": "^3.5.21",
+    "vue-tsc": "^3.0.7"
+  }
 }
