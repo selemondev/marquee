@@ -25,8 +25,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       '@selemondev/vue3-marquee':
-        specifier: workspace:*
-        version: link:../../packages/vue3-marquee
+        specifier: ^0.0.10
+        version: 0.0.10(tailwindcss@4.1.13)(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
       '@tailwindcss/vite':
         specifier: ^4.1.13
         version: 4.1.13(vite@7.1.11(@types/node@24.5.2)(jiti@2.6.1)(lightningcss@1.30.1))
@@ -535,6 +535,11 @@ packages:
 
   '@selemondev/shiki-transformer-copy-button@0.0.2':
     resolution: {integrity: sha512-tBO3XW5BotqwQJUDMK0lJecjhVTff7dCM644dc509IfEjVzB1EsCmjv7d3Ps9JyF1VatSF3gZ7TCOdY+hTxsgw==}
+
+  '@selemondev/vue3-marquee@0.0.10':
+    resolution: {integrity: sha512-9KO9+XSVQYSuVRk1dgUJ+39jujjvgXIbPtFjFSvYyJFT2/w6nkILIxJnHHlOEwanC3xxcujVSBjg/zEGfM8isA==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@selemondev/vue3-marquee@0.0.8':
     resolution: {integrity: sha512-PoZd52L3OywhQzCmrEe+C990z4NBZukGS/jxGjt2Xjv8y/nmJu+3trHM9UP0/8XpYAmcGO2NHy2sVARznV1wBQ==}
@@ -1634,6 +1639,15 @@ snapshots:
   '@selemondev/shiki-transformer-copy-button@0.0.2':
     dependencies:
       hastscript: 9.0.1
+
+  '@selemondev/vue3-marquee@0.0.10(tailwindcss@4.1.13)(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@selemondev/vue3-marquee': 0.0.8(tailwindcss@4.1.13)(typescript@5.9.2)
+      tailwindcss-animate: 1.0.7(tailwindcss@4.1.13)
+      vue: 3.5.21(typescript@5.9.2)
+    transitivePeerDependencies:
+      - tailwindcss
+      - typescript
 
   '@selemondev/vue3-marquee@0.0.8(tailwindcss@4.1.13)(typescript@5.9.2)':
     dependencies:

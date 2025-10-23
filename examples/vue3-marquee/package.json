@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@selemondev/shiki-transformer-copy-button": "^0.0.2",
-    "@selemondev/vue3-marquee": "workspace:*",
+    "@selemondev/vue3-marquee": "^0.0.10",
     "@tailwindcss/vite": "^4.1.13",
     "shiki-block-vue": "^1.0.5",
     "tailwindcss": "^4.1.13",
