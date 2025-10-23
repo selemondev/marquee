@@ -17,7 +17,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "shiki-block-vue": "^1.0.5",
     "tailwindcss": "^4.1.13",
-    "vue": "^3.4.15"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
