@@ -33,7 +33,6 @@
     "generate:css": "pnpx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/output.css --minify"
   },
   "dependencies": {
-    "@selemondev/vue3-marquee": "^0.0.8",
     "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
