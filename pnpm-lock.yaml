@@ -71,8 +71,8 @@ importers:
   packages/vue3-marquee:
     dependencies:
       '@selemondev/vue3-marquee':
-        specifier: ^0.0.8
-        version: 0.0.8(tailwindcss@4.1.13)(typescript@5.9.2)
+        specifier: ^0.0.10
+        version: 0.0.10(tailwindcss@4.1.13)(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.1.13)
