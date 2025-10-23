@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v0.0.11
+
+[compare changes](https://github.com/selemondev/marquee/compare/v0.0.10...v0.0.11)
+
+### 🚀 Enhancements
+
+- Migrate to shiki-block-vue ([3b038db](https://github.com/selemondev/marquee/commit/3b038db))
+
+### 📖 Documentation
+
+- Update docs ([a5493f9](https://github.com/selemondev/marquee/commit/a5493f9))
+- Update guide ([46fb57d](https://github.com/selemondev/marquee/commit/46fb57d))
+
+### 🏡 Chore
+
+- **release:** V0.0.8 ([1b6ed4d](https://github.com/selemondev/marquee/commit/1b6ed4d))
+- **release:** V0.0.9 ([b4bde96](https://github.com/selemondev/marquee/commit/b4bde96))
+- **release:** V0.0.10 ([81aba7c](https://github.com/selemondev/marquee/commit/81aba7c))
+- **deps-dev:** Bump @types/node from 24.3.1 to 24.5.2 ([393baae](https://github.com/selemondev/marquee/commit/393baae))
+- **deps-dev:** Bump typescript from 5.3.3 to 5.9.2 ([492ae71](https://github.com/selemondev/marquee/commit/492ae71))
+- **deps-dev:** Bump vite in the npm_and_yarn group across 1 directory ([3037eae](https://github.com/selemondev/marquee/commit/3037eae))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.10
 
 [compare changes](https://github.com/selemondev/marquee/compare/v0.0.9...v0.0.10)
