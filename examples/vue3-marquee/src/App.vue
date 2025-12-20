@@ -91,7 +91,7 @@ import {
                 <CodeBlock
                     :code="installCmd"
                     lang="bash"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -119,7 +119,7 @@ import {
                 <CodeBlock
                     :code="globalImportSnippet"
                     lang="javascript"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -145,7 +145,7 @@ import {
                 <CodeBlock
                     :code="localImportSnippet"
                     lang="javascript"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -169,7 +169,7 @@ import {
                 <CodeBlock
                     :code="nuxtPluginSnippet"
                     lang="javascript"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -205,7 +205,7 @@ import {
                 <CodeBlock
                     :code="fadeCodeSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -241,7 +241,7 @@ import {
                 <CodeBlock
                     :code="reverseCodeSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -277,7 +277,7 @@ import {
                 <CodeBlock
                     :code="pauseOnHoverSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -315,7 +315,7 @@ import {
                 <CodeBlock
                     :code="verticalCodeSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -355,7 +355,7 @@ import {
                 <CodeBlock
                     :code="customGapAndSpeedSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -397,7 +397,7 @@ import {
                 <CodeBlock
                     :code="reducedMotionSnippet"
                     lang="vue-html"
-                    :theme="{
+                    :themes="{
                         light: 'vitesse-light',
                         dark: 'vitesse-dark',
                     }"
@@ -416,29 +416,9 @@ import {
 </template>
 
 <style>
-@media (prefers-color-scheme: dark) {
-    .shiki,
-    .shiki span {
-        color: var(--shiki-dark) !important;
-        background-color: var(--shiki-dark-bg) !important;
-        font-style: var(--shiki-dark-font-style) !important;
-        font-weight: var(--shiki-dark-font-weight) !important;
-        text-decoration: var(--shiki-dark-text-decoration) !important;
-    }
-}
-
-html.dark .shiki,
-html.dark .shiki span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
-}
-
 pre {
     z-index: 1;
-    padding: 15px 20px;
+    padding: 13px 20px;
     border-radius: 10px;
     overflow-x: auto;
     -ms-overflow-style: none;
@@ -452,4 +432,6 @@ code {
     line-height: 1.7;
     font-size: 15px;
 }
+
+::-webkit-scrollbar { display: none; }
 </style>
