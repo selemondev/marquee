@@ -1,6 +1,9 @@
 {
   "name": "docs",
   "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "dev": "astro dev",
