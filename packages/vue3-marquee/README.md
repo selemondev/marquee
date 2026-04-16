@@ -11,28 +11,29 @@
 ```bash
 npm install @selemondev/vue3-marquee
 ```
+
 or you can skip npm install, and just copy and paste the source code into your component like Shadcn Vue (don't forget to also copy the tailwind config if you do this).
 
 ## Register it as a global component
 
 ```js
 import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
-import { createApp } from 'vue'
-import App from './App.vue'
+import "@selemondev/vue3-marquee/dist/style.css";
+import { createApp } from "vue";
+import App from "./App.vue";
 
 const app = createApp(App);
-app.component('Marquee', Marquee)
-app.mount('#app')
+app.component("Marquee", Marquee);
+app.mount("#app");
 ```
 
-or 
+or
 
 ## Register it as a local component
 
 ```js
 import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
+import "@selemondev/vue3-marquee/dist/style.css";
 ```
 
 ## Nuxt
@@ -43,10 +44,10 @@ If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown be
 // plugins/marquee.ts
 
 import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
+import "@selemondev/vue3-marquee/dist/style.css";
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.component('Marquee', Marquee)
-})
+  nuxtApp.vueApp.component("Marquee", Marquee);
+});
 ```
 
 ## Usage
@@ -78,4 +79,3 @@ This library is made specifically for Tailwind users, however you can also use v
 ## License
 
 Released under [MIT](/LICENSE) by [@selemondev](https://github.com/selemondev).
-

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@selemondev/vue3-marquee/style.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-geist: "Geist", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  body {
+    @apply font-geist min-h-screen w-full px-2 mt-26 mb-6 text-zinc-800 bg-gray-50;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .secondary-text {
+    @apply text-[#515158];
+  }
+
+  .icon {
+    @apply text-gray-600 hover:text-black transition-colors duration-200 ease-in;
+  }
+}

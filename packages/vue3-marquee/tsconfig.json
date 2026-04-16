@@ -1,23 +1,12 @@
 {
-	"compilerOptions": {
-		"target": "esnext",
-		"lib": ["es2023", "dom", "dom.iterable"],
-		"moduleDetection": "force",
-		"module": "preserve",
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"types": ["node"],
-		"strict": true,
-		"noUnusedLocals": true,
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"esModuleInterop": true,
-		"isolatedModules": true,
-		"verbatimModuleSyntax": true,
-		"skipLibCheck": true,
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	},
-	"include": ["src"]
+  "extends": "../../tsconfig.json",
+  "include": ["env.d.ts", "shim-vue.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }

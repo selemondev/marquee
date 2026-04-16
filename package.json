@@ -2,32 +2,35 @@
   "name": "@selemondev/marquee",
   "version": "0.0.12",
   "description": "A Beautiful Marquee component for Vue",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/selemondev/marquee"
-  },
+  "keywords": [
+    "marquee",
+    "tailwindcss",
+    "typescript",
+    "vue",
+    "vue3"
+  ],
   "bugs": {
     "url": "https://github.com/selemondev/marquee/issues",
     "email": "selemonsrdev@gmail.com"
   },
-  "scripts": {
-    "release": "npx changelogen@latest --release"
-  },
-  "keywords": [
-    "vue",
-    "marquee",
-    "tailwindcss",
-    "typescript",
-    "vue3"
-  ],
-  "author": "Selemondev",
   "license": "MIT",
+  "author": "Selemondev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selemondev/marquee"
+  },
+  "type": "module",
+  "scripts": {
+    "release": "npx changelogen@latest --release",
+    "prepare": "vp config"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0"
   },
-  "packageManager": "pnpm@10.27.0",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.3"
-  }
+    "@vitejs/plugin-vue": "^6.0.3",
+    "vite-plus": "catalog:"
+  },
+  "packageManager": "pnpm@10.27.0"
 }

@@ -48,13 +48,13 @@ or you can skip the npm install, and just copy and paste the source code into yo
 
 ```js
 import Marquee from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/index.css"
-import { createApp } from 'vue'
-import App from './App.vue'
+import "@selemondev/vue3-marquee/dist/index.css";
+import { createApp } from "vue";
+import App from "./App.vue";
 
 const app = createApp(App);
-app.component('Marquee', Marquee)
-app.mount('#app')
+app.component("Marquee", Marquee);
+app.mount("#app");
 ```
 
 or
@@ -63,7 +63,7 @@ or
 
 ```js
 import Marquee from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/index.css"
+import "@selemondev/vue3-marquee/dist/index.css";
 ```
 
 ## Nuxt
@@ -74,10 +74,10 @@ If you are using Nuxt 3, you can simply register it as a Nuxt plugin as shown be
 // plugins/marquee.ts
 
 import Marquee from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/style.css"
+import "@selemondev/vue3-marquee/dist/style.css";
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.component('Marquee', Marquee)
-})
+  nuxtApp.vueApp.component("Marquee", Marquee);
+});
 ```
 
 ## Usage

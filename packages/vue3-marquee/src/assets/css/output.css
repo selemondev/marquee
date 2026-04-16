@@ -1,2 +1,74 @@
-/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
-.flex{display:flex}.shrink-0{flex-shrink:0}.animate-marquee-left{animation:var(--animate-marquee-left)}.animate-marquee-up{animation:var(--animate-marquee-up)}.justify-around{justify-content:space-around}.gap-\[1rem\]{gap:1rem}.overflow-hidden{overflow:hidden}.\[--gap\:1rem\]{--gap:1rem}.direction-reverse{animation-direction:reverse}.running{animation-play-state:running}@media (hover:hover){.group-hover\:\[animation-play-state\:paused\]:is(:where(.group):hover *){animation-play-state:paused}}:root,:host{--animate-marquee-left:marquee-left var(--duration,40s)linear infinite;--animate-marquee-up:marquee-up var(--duration,40s)linear infinite}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0)scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1))rotate(var(--tw-enter-rotate,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0)scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1))rotate(var(--tw-exit-rotate,0))}}@keyframes marquee-left{0%{transform:translate(0)}to{transform:translateX(calc(-100% - var(--gap)))}}@keyframes marquee-up{0%{transform:translateY(0)}to{transform:translateY(calc(-100% - var(--gap)))}}
+/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+.flex {
+  display: flex;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.animate-marquee-left {
+  animation: var(--animate-marquee-left);
+}
+.animate-marquee-up {
+  animation: var(--animate-marquee-up);
+}
+.justify-around {
+  justify-content: space-around;
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.\[--gap\:1rem\] {
+  --gap: 1rem;
+}
+.direction-reverse {
+  animation-direction: reverse;
+}
+.running {
+  animation-play-state: running;
+}
+@media (hover: hover) {
+  .group-hover\:paused:is(:where(.group):hover *) {
+    animation-play-state: paused;
+  }
+}
+:root,
+:host {
+  --spacing: 0.25rem;
+  --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
+  --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
+}
+@keyframes enter {
+  0% {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
+      scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1))
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
+      scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1))
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+@keyframes marquee-left {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}

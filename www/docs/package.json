@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^6.0.1",
+    "@selemondev/vue3-marquee": "workspace:*",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.7",
+    "hastscript": "^9.0.1",
+    "tailwindcss": "^4.2.2",
+    "vue": "^3.5.32"
+  },
+  "devDependencies": {
+    "shiki": "^3.20.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

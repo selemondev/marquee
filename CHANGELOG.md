@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v0.0.12
 
 [compare changes](https://github.com/selemondev/marquee/compare/v0.0.11...v0.0.12)
@@ -248,4 +247,3 @@
 ### ❤️ Contributors
 
 - Selemon Dev <selemon@nathandigital.com>
-

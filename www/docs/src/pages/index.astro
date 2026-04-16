@@ -1,0 +1,229 @@
+---
+import Layout from "@/layouts/default.astro";
+import UIContainer from "@/components/ui/ui-container.astro";
+import CustomCodeBlock from "@/components/ui/custom-code-block.vue";
+import MarqueeAnimation from "@/components/ui/marquee-animation.vue";
+import MarqueeAnimationFade from "@/components/ui/marquee-animation-fade.vue";
+import MarqueeAnimationPauseOnHover from "@/components/ui/marquee-animation-pause-on-hover.vue";
+import MarqueeAnimationVertical from "@/components/ui/marquee-animation-vertical.vue";
+import MarqueeAnimationCustomGapAndSpeed from "@/components/ui/marquee-animation-custom-gap-and-speed.vue";
+import MarqueeAnimationReducedMotion from "@/components/ui/marquee-animation-reduced-motion.vue";
+import {
+    installCmd,
+    globalImportSnippet,
+    localImportSnippet,
+    nuxtPluginSnippet,
+    fadeCodeSnippet,
+    reverseCodeSnippet,
+    pauseOnHoverSnippet,
+    verticalCodeSnippet,
+    customGapAndSpeedSnippet,
+    reducedMotionSnippet,
+} from "@/snippets";
+import GithubIcon from "@/components/icons/github-icon.vue";
+import TwitterIcon from "@/components/icons/twitter-icon.vue";
+import MarqueeAnimationReverse from "@/components/ui/marquee-animation-reverse.vue";
+export interface Testimonials {
+    name: string;
+    title: string;
+    avatar: string;
+    content: string;
+}
+const testimonials: Testimonials[] = [
+    {
+        name: "Selemondev",
+        title: "Senior Frontend Engineer",
+        avatar: "https://github.com/selemondev.png",
+        content:
+            "Marquee Library has been a game-changer for our TypeScript projects. Its seamless integration and robust features have significantly improved our UI's dynamic capabilities.",
+    },
+    {
+        name: "Raj Patel",
+        title: "Tech Lead",
+        avatar: "https://i.pravatar.cc/150?img=18",
+        content:
+            "I'm thoroughly impressed with Marquee's performance and ease of use. It made implementing complex scrolling texts a breeze, and the support for TypeScript is top-notch.",
+    },
+    {
+        name: "Sofia Garcia",
+        title: "UI/UX Designer",
+        avatar: "https://i.pravatar.cc/150?img=45",
+        content:
+            "As a designer, I appreciate how Marquee enhances the visual appeal of our applications. The flexibility it offers in styling and animation is fantastic.",
+    },
+    {
+        name: "John Mack",
+        title: "Full Stack Developer",
+        avatar: "https://i.pravatar.cc/150?img=60",
+        content:
+            "Integrating Marquee into our full-stack TypeScript projects has been incredibly efficient. Its compatibility and ease of customization are ideal for our diverse project needs.",
+    },
+    {
+        name: "Isabella Smith",
+        title: "Project Manager",
+        avatar: "https://i.pravatar.cc/150?img=32",
+        content:
+            "Marquee Library has consistently delivered beyond our expectations. It's not just a tool; it's an asset that enhances productivity and creativity in our TypeScript applications.",
+    },
+];
+---
+
+<Layout>
+    <main class="flex flex-col space-y-4 px-2">
+        <div class="flex flex-col items-center space-y-1">
+            <h1 class="font-semibold text-xl lg:text-4xl">Vue Marquee</h1>
+            <p class="secondary-text text-center">
+                A beautiful marquee component for Vue 3.
+            </p>
+        </div>
+        <UIContainer>
+            <MarqueeAnimation testimonials={testimonials} client:load />
+        </UIContainer>
+        <div class="pt-3 flex flex-col space-y-2">
+            <h1 class="font-medium text-lg">Installation</h1>
+            <CustomCodeBlock client:only="vue" lang="bash" code={installCmd} />
+        </div>
+
+        <UIContainer>
+            <h1 class="font-normal text-lg">
+                Register it as a global component
+            </h1>
+            <CustomCodeBlock
+                client:only="vue"
+                lang="javascript"
+                line-numbers={true}
+                code={globalImportSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <div class="flex items-center space-x-2">
+                <span class="w-full h-px bg-gray-300"></span>
+                <span>or</span>
+                <span class="w-full h-px bg-gray-300"></span>
+            </div>
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="font-normal text-lg">
+                Register it as a local component
+            </h1>
+            <CustomCodeBlock
+                client:only="vue"
+                lang="javascript"
+                line-numbers={true}
+                code={localImportSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="font-medium text-lg">Nuxt 3</h1>
+            <p class="secondary-text">
+                If you are using Nuxt 3, you can simply register it as a Nuxt
+                plugin as shown below:
+            </p>
+            <CustomCodeBlock
+                client:only="vue"
+                lang="javascript"
+                line-numbers={true}
+                code={nuxtPluginSnippet}
+            />
+        </UIContainer>
+        <UIContainer>
+            <h1 class="font-medium text-lg">Fade</h1>
+            <MarqueeAnimationFade testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={fadeCodeSnippet}
+            />
+        </UIContainer>
+        <UIContainer>
+            <h1 class="font-medium text-lg">Reverse</h1>
+            <MarqueeAnimationReverse testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={reverseCodeSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="text-lg font-medium">Pause On Hover</h1>
+            <MarqueeAnimationPauseOnHover testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={pauseOnHoverSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="text-lg font-medium">Vertical</h1>
+            <MarqueeAnimationVertical testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={verticalCodeSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="text-lg font-medium">Custom Gap And Speed</h1>
+            <MarqueeAnimationCustomGapAndSpeed testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={customGapAndSpeedSnippet}
+            />
+        </UIContainer>
+
+        <UIContainer>
+            <h1 class="text-lg font-medium">Reduced Motion</h1>
+            <p class="secondary-text items-center">
+                Disable animation when user device prefers reduced motion.
+            </p>
+            <MarqueeAnimationReducedMotion testimonials={testimonials} />
+            <CustomCodeBlock
+                client:only="vue"
+                line-numbers={true}
+                lang="html"
+                code={reducedMotionSnippet}
+            />
+        </UIContainer>
+
+        <div class="flex flex-col space-y-1">
+            <h1 class="font-medium text-lg">Feedback</h1>
+            <p class="secondary-text text-sm">
+                Found an issue? Submit it
+                <a
+                    rel="noopener noreferrer"
+                    href="https://github.com/selemondev/marquee/issues/new"
+                    class="text-blue-500 hover:text-blue-600 transition-colors duration-200 ease-in decoration-dotted underline-offset-[5px] underline cursor-pointer"
+                >
+                    here
+                </a>.
+            </p>
+        </div>
+        <div class="flex items-center space-x-2">
+            <a
+                href="https://github.com/selemondev/marquee"
+                title="Github"
+                rel="noopener noreferrer"
+                aria-label="Selemondev on GitHub"><GithubIcon class="icon" /></a
+            >
+            <a
+                href="https://twitter.com/selemondev"
+                title="Twitter"
+                rel="noopener noreferrer"
+                aria-label="Selemondev on Twitter"
+                ><TwitterIcon class="icon" /></a
+            >
+        </div>
+    </main>
+</Layout>
