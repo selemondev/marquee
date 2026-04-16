@@ -2,27 +2,24 @@
   "name": "@selemondev/vue3-marquee",
   "version": "0.0.11",
   "private": false,
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "packageManager": "pnpm@10.27.0",
-  "exports": {
-    ".": "./dist/index.js",
-    "./package.json": "./package.json",
-    "./dist/index.css": "./dist/index.css"
-  },
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json",
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
-    "build:package": "pnpm generate:css && tsdown",
-    "dev:build": "tsdown --watch ./src/index.ts",
+    "build:package": "pnpm generate:css && vp pack",
+    "dev:build": "vp pack --watch ./src/index.ts",
     "dev": "tsx ./src/index.ts",
-    "play:dev": "vite",
+    "play:dev": "vp dev",
     "biome": "biome check --write",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test": "vp test",
+    "coverage": "vp test run --coverage",
     "generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
     "generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
     "generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
@@ -35,21 +32,26 @@
   "dependencies": {
     "tailwindcss-animate": "^1.0.7"
   },
-  "peerDependencies": {
-    "vue": "^3.0.0"
-  },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@tsconfig/node18": "^18.2.6",
-    "@types/node": "^24.10.4",
+    "@tsdown/css": "^0.21.9",
     "@vue/tsconfig": "^0.7.0",
     "npm-run-all2": "^8.0.4",
     "tailwindcss": "^4.1.18",
-    "tsdown": "^0.18.0",
     "typescript": "~5.9.3",
     "unplugin-vue": "^7.1.0",
-    "vite": "^7.3.0",
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
     "vue": "^3.5.26",
     "vue-tsc": "^3.1.8"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "packageManager": "pnpm@10.27.0",
+  "inlinedDependencies": {
+    "clsx": "2.1.1",
+    "tailwind-merge": "2.6.1"
   }
 }

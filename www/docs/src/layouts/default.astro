@@ -1,0 +1,37 @@
+---
+import "@/styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="icon"
+            href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%230cb800"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+        />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            name="description"
+            content="A beautiful marquee component for Vue."
+        />
+        <title>Vue Marquee</title>
+    </head>
+    <body>
+        <div class="max-w-3xl mx-auto md:px-6">
+            <slot />
+        </div>
+    </body>
+</html>

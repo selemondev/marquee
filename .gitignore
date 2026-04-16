@@ -6,3 +6,6 @@ dist
 .history
 .env
 .netlify
+.zed
+.vite-hooks
+.pnpm-store
