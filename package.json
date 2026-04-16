@@ -21,7 +21,8 @@
   "type": "module",
   "scripts": {
     "release": "npx changelogen@latest --release",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
