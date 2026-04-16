@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^6.0.3
-        version: 6.0.3(vite@8.0.0-beta.3(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1))(vue@3.5.26(typescript@5.9.3))
+        version: 6.0.3(vite@8.0.0-beta.3(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1))(vue@3.5.26(typescript@5.9.3))
 
   examples/vue3-marquee:
     dependencies:
@@ -29,10 +29,10 @@ importers:
         version: 0.0.11(tailwindcss@4.1.18)(vue@3.5.26(typescript@5.9.3))
       '@tailwindcss/vite':
         specifier: ^4.1.18
-        version: 4.1.18(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))
+        version: 4.1.18(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))
       shiki-block-vue:
         specifier: ^1.1.1
-        version: 1.1.1(@vue/tsconfig@0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))(vue-tsc@3.1.8(typescript@5.9.3))(vue@3.5.26(typescript@5.9.3))
+        version: 1.1.1(@vue/tsconfig@0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))(vue-tsc@3.1.8(typescript@5.9.3))(vue@3.5.26(typescript@5.9.3))
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -45,10 +45,10 @@ importers:
         version: 20.1.8
       '@types/node':
         specifier: ^24.10.4
-        version: 24.10.4
+        version: 24.12.2
       '@vitejs/plugin-vue':
         specifier: ^6.0.3
-        version: 6.0.3(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))(vue@3.5.26(typescript@5.9.3))
+        version: 6.0.3(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))(vue@3.5.26(typescript@5.9.3))
       '@vue/tsconfig':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
@@ -63,7 +63,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.3.0
-        version: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2)
+        version: 7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.3)
@@ -76,13 +76,13 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.18
-        version: 4.1.18(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))
+        version: 4.1.18(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))
       '@tsconfig/node18':
         specifier: ^18.2.6
         version: 18.2.6
       '@types/node':
         specifier: ^24.10.4
-        version: 24.10.4
+        version: 24.12.2
       '@vue/tsconfig':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
@@ -100,10 +100,10 @@ importers:
         version: 5.9.3
       unplugin-vue:
         specifier: ^7.1.0
-        version: 7.1.0(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1)(vue@3.5.26(typescript@5.9.3))
+        version: 7.1.0(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1)(vue@3.5.26(typescript@5.9.3))
       vite:
         specifier: ^7.3.0
-        version: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2)
+        version: 7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2)
       vue:
         specifier: ^3.5.26
         version: 3.5.26(typescript@5.9.3)
@@ -993,8 +993,8 @@ packages:
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
-  '@types/node@24.10.4':
-    resolution: {integrity: sha512-vnDVpYPMzs4wunl27jHrfmwojOGKya0xyM3sH+UE5iv5uPS6vX7UIoh6m+vQc5LGBq52HBKPIn/zcSZVzeDEZg==}
+  '@types/node@24.12.2':
+    resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -2263,12 +2263,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.18
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.18
 
-  '@tailwindcss/vite@4.1.18(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))':
+  '@tailwindcss/vite@4.1.18(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))':
     dependencies:
       '@tailwindcss/node': 4.1.18
       '@tailwindcss/oxide': 4.1.18
       tailwindcss: 4.1.18
-      vite: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2)
 
   '@tsconfig/node18@18.2.6': {}
 
@@ -2289,7 +2289,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/node@24.10.4':
+  '@types/node@24.12.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -2297,16 +2297,16 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-vue@6.0.3(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))(vue@3.5.26(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.3(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.53
-      vite: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2)
       vue: 3.5.26(typescript@5.9.3)
 
-  '@vitejs/plugin-vue@6.0.3(vite@8.0.0-beta.3(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1))(vue@3.5.26(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.3(vite@8.0.0-beta.3(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.53
-      vite: 8.0.0-beta.3(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1)
+      vite: 8.0.0-beta.3(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1)
       vue: 3.5.26(typescript@5.9.3)
 
   '@volar/language-core@2.4.26':
@@ -2847,10 +2847,10 @@ snapshots:
 
   shell-quote@1.8.3: {}
 
-  shiki-block-vue@1.1.1(@vue/tsconfig@0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2))(vue-tsc@3.1.8(typescript@5.9.3))(vue@3.5.26(typescript@5.9.3)):
+  shiki-block-vue@1.1.1(@vue/tsconfig@0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))(vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2))(vue-tsc@3.1.8(typescript@5.9.3))(vue@3.5.26(typescript@5.9.3)):
     dependencies:
       '@vue/tsconfig': 0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
-      vite: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2)
+      vite: 7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2)
       vue: 3.5.26(typescript@5.9.3)
       vue-tsc: 3.1.8(typescript@5.9.3)
 
@@ -2965,14 +2965,14 @@ snapshots:
       unplugin: 2.3.11
     optional: true
 
-  unplugin-vue@7.1.0(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1)(vue@3.5.26(typescript@5.9.3)):
+  unplugin-vue@7.1.0(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1)(vue@3.5.26(typescript@5.9.3)):
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
       '@vue/reactivity': 3.5.26
       obug: 2.1.1
       unplugin: 2.3.11
-      vite: 8.0.0-beta.3(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1)
+      vite: 8.0.0-beta.3(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1)
       vue: 3.5.26(typescript@5.9.3)
     transitivePeerDependencies:
       - '@types/node'
@@ -3008,7 +3008,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(lightningcss@1.30.2):
+  vite@7.3.0(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.30.2):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3017,12 +3017,12 @@ snapshots:
       rollup: 4.52.5
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.10.4
+      '@types/node': 24.12.2
       fsevents: 2.3.3
       jiti: 2.6.1
       lightningcss: 1.30.2
 
-  vite@8.0.0-beta.3(@types/node@24.10.4)(esbuild@0.25.11)(jiti@2.6.1):
+  vite@8.0.0-beta.3(@types/node@24.12.2)(esbuild@0.25.11)(jiti@2.6.1):
     dependencies:
       '@oxc-project/runtime': 0.103.0
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3032,7 +3032,7 @@ snapshots:
       rolldown: 1.0.0-beta.55
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.10.4
+      '@types/node': 24.12.2
       esbuild: 0.25.11
       fsevents: 2.3.3
       jiti: 2.6.1
