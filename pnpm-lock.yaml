@@ -41,9 +41,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.2.2(@voidzero-dev/vite-plus-core@0.1.18(@tsdown/css@0.21.9)(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(typescript@5.9.3))
-      '@tsconfig/node18':
-        specifier: ^18.2.6
-        version: 18.2.6
+      '@tsconfig/node20':
+        specifier: ^20.1.0
+        version: 20.1.9
       '@tsdown/css':
         specifier: ^0.21.9
         version: 0.21.9(jiti@2.6.1)(postcss@8.5.10)(tsdown@0.21.9)
@@ -1259,8 +1259,8 @@ packages:
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
 
-  '@tsconfig/node18@18.2.6':
-    resolution: {integrity: sha512-eAWQzAjPj18tKnDzmWstz4OyWewLUNBm9tdoN9LayzoboRktYx3Enk1ZXPmThj55L7c4VWYq/Bzq0A51znZfhw==}
+  '@tsconfig/node20@20.1.9':
+    resolution: {integrity: sha512-IjlTv1RsvnPtUcjTqtVsZExKVq+KQx4g5pCP5tI7rAs6Xesl2qFwSz/tPDBC4JajkL/MlezBu3gPUwqRHl+RIg==}
 
   '@tsdown/css@0.21.9':
     resolution: {integrity: sha512-ZuSHdio/H9V3+LvHQ9HssC7vKNwqetG6NEyuUME5uCi1VsoGnYJKLQ+CZl4AMT87kSP+N6mF0egzdWtV34e3Pw==}
@@ -4134,7 +4134,7 @@ snapshots:
       tailwindcss: 4.2.2
       vite: 8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)
 
-  '@tsconfig/node18@18.2.6': {}
+  '@tsconfig/node20@20.1.9': {}
 
   '@tsdown/css@0.21.9(jiti@2.6.1)(postcss@8.5.10)(tsdown@0.21.9)':
     dependencies:

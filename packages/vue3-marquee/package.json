@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
-    "@tsconfig/node18": "^18.2.6",
+    "@tsconfig/node20": "^20.1.0",
     "@tsdown/css": "^0.21.9",
     "@vue/tsconfig": "^0.7.0",
     "npm-run-all2": "^8.0.4",
