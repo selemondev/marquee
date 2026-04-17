@@ -22,7 +22,7 @@
   "scripts": {
     "release": "changeset version",
     "prepare": "vp config",
-    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
+    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter vue3-marquee-docs build:docs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
