@@ -34,6 +34,5 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.3",
     "vite-plus": "catalog:"
-  },
-  "packageManager": "pnpm@10.27.0"
+  }
 }
