@@ -1,6 +1,6 @@
 {
   "name": "@selemondev/vue3-marquee",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "private": false,
   "files": [
     "dist"
@@ -21,7 +21,7 @@
     "test": "vp test",
     "coverage": "vp test run --coverage",
     "generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
-    "generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
+    "generate:major:release": "pnpx changelogen@latest --major --release && git push --follow-tags",
     "generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
     "generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
     "bump:version": "pnpx changelogen@latest --bump",
