@@ -2,6 +2,14 @@
   "name": "@selemondev/vue3-marquee",
   "version": "1.2.0",
   "private": false,
+  "bugs": {
+    "url": "https://github.com/selemondev/marquee/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selemondev/marquee"
+  },
   "files": [
     "dist"
   ],
