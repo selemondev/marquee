@@ -32,7 +32,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build
+        run: pnpm build:marquee:package
 
       - name: Lint
         run: pnpm lint
@@ -60,4 +60,4 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build
+        run: pnpm build:marquee:package

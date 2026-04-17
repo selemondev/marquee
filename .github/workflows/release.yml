@@ -34,4 +34,4 @@ jobs:
         run: pnpm build:marquee:package
 
       - name: Publish to npm
-        run: pnpm publish --access public --no-git-checks
+        run: pnpm --filter @selemondev/vue3-marquee publish --access public --no-git-checks
