@@ -1,6 +1,6 @@
 {
   "name": "@selemondev-marquee/root",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Beautiful Marquee component for Vue",
   "keywords": [
     "marquee",
@@ -20,9 +20,9 @@
   },
   "type": "module",
   "scripts": {
-    "generate:major:release": "pnpx changelogen@latest --major && git push --follow-tags",
-    "generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
-    "generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
+    "generate:patch:release": "node scripts/release.mjs",
+    "generate:minor:release": "node scripts/release.mjs --minor",
+    "generate:major:release": "node scripts/release.mjs --major",
     "prepare": "vp config",
     "lint": "vp lint",
     "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"

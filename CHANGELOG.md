@@ -17,7 +17,7 @@
 
 ### ❤️ Contributors
 
-- Selemondev <selemondev19@gmail.com>
+- @selemondev
 
 ## v0.0.11
 
@@ -43,7 +43,7 @@
 
 ### ❤️ Contributors
 
-- Selemondev <selemondev19@gmail.com>
+- @selemondev
 
 ## v0.0.10
 
@@ -98,7 +98,7 @@
 
 ### ❤️ Contributors
 
-- Selemondev <selemondev19@gmail.com>
+- @selemondev
 
 ## v0.0.9
 
@@ -152,7 +152,7 @@
 
 ### ❤️ Contributors
 
-- Selemondev <selemondev19@gmail.com>
+- @selemondev
 
 ## v0.0.8
 
@@ -205,7 +205,7 @@
 
 ### ❤️ Contributors
 
-- Selemondev <selemondev19@gmail.com>
+- @selemondev
 
 ## v0.0.7
 
@@ -229,8 +229,7 @@
 
 ### ❤️ Contributors
 
-- Selemon Dev <selemon@nathandigital.com>
-- Selemondev
+- @selemondev
 
 ## v0.0.3
 
@@ -246,4 +245,4 @@
 
 ### ❤️ Contributors
 
-- Selemon Dev <selemon@nathandigital.com>
+- @selemondev
