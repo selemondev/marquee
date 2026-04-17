@@ -6,7 +6,7 @@ const ROOT = "package.json";
 const ALL = [ROOT, ...SIBLINGS];
 
 const args = process.argv.slice(2);
-const explicit = args.find((a) => /^\d+\.\d+\.\d+/.test(a)); // e.g. "1.0.0"
+const explicit = args.find((a) => /^\d+\.\d+\.\d+/.test(a));
 const bumpFlag = args.filter((a) => a.startsWith("--")).join(" ");
 
 let version;
@@ -17,7 +17,7 @@ if (explicit) {
     pkg.version = explicit;
     writeFileSync(p, JSON.stringify(pkg, null, 2) + "\n");
   }
-  execSync("pnpx changelogen@latest", { stdio: "inherit" }); // no --bump
+  execSync("pnpx changelogen@latest", { stdio: "inherit" });
   version = explicit;
 } else {
   execSync(`pnpx changelogen@latest --bump ${bumpFlag}`, { stdio: "inherit" });
@@ -31,5 +31,6 @@ if (explicit) {
 
 execSync("git add -A", { stdio: "inherit" });
 execSync(`git commit -m "chore(release): v${version}"`, { stdio: "inherit" });
-execSync(`git tag v${version}`, { stdio: "inherit" });
+execSync(`git tag -a v${version} -m "v${version}"`, { stdio: "inherit" });
 execSync("git push --follow-tags", { stdio: "inherit" });
+execSync(`pnpx changelogen@latest gh release v${version}`, { stdio: "inherit" });
