@@ -39,7 +39,7 @@
     "@vue/tsconfig": "^0.7.0",
     "npm-run-all2": "^8.0.4",
     "tailwindcss": "^4.1.18",
-    "typescript": "~5.9.3",
+    "typescript": "~6.0.0",
     "unplugin-vue": "^7.1.0",
     "vite": "catalog:",
     "vite-plus": "catalog:",
