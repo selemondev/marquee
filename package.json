@@ -28,6 +28,7 @@
     "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
   },
   "dependencies": {
+    "@types/node": "^25.6.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.1"
   },
