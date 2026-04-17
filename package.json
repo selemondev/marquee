@@ -1,6 +1,7 @@
 {
   "name": "@selemondev-marquee/root",
   "version": "1.0.0",
+  "private": "true",
   "description": "A Beautiful Marquee component for Vue",
   "keywords": [
     "marquee",
@@ -25,7 +26,9 @@
     "generate:major:release": "node scripts/release.mjs --major",
     "prepare": "vp config",
     "lint": "vp lint",
-    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
+    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs",
+    "build:astro:docs": "pnpm --filter docs build:docs",
+    "build:marquee:package": "pnpm --filter @selemondev/vue3-marquee build:package"
   },
   "dependencies": {
     "@types/node": "^25.6.0",
