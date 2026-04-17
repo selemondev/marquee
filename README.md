@@ -31,13 +31,13 @@ npm install @selemondev/vue3-marquee@latest
 yarn add @selemondev/vue3-marquee@latest
 
 # pnpm
-pnpm install @selemondev/vue3-marquee@latest
+pnpm add @selemondev/vue3-marquee@latest
 
 # bun
 bun install @selemondev/vue3-marquee@latest
 
 # deno
-deno install @selemondev/vue3-marquee@latest
+deno install npm:@selemondev/vue3-marquee@latest
 ```
 
 <!-- /automd -->
