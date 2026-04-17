@@ -24,6 +24,7 @@
     "generate:minor:release": "pnpx changelogen@latest --minor && git push --follow-tags",
     "generate:patch:release": "pnpx changelogen@latest --patch && git push --follow-tags",
     "prepare": "vp config",
+    "lint": "vp lint",
     "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
   },
   "dependencies": {
