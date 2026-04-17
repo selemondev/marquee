@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.1.0
+
+[compare changes](https://github.com/selemondev/marquee/compare/v1.0.0...v1.1.0)
+
+### 🩹 Fixes
+
+- Gh release ([025d192](https://github.com/selemondev/marquee/commit/025d192))
+
+### 📖 Documentation
+
+- Update README.md file ([8b0d023](https://github.com/selemondev/marquee/commit/8b0d023))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.0.0
 
 [compare changes](https://github.com/selemondev/marquee/compare/v0.0.12...v1.0.0)
