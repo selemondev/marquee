@@ -30,7 +30,7 @@ jobs:
           node-version: lts/*
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: Build package
         run: pnpm build
