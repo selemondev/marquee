@@ -48,7 +48,7 @@ or you can skip the npm install, and just copy and paste the source code into yo
 
 ```js
 import Marquee from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/index.css";
+import "@selemondev/vue3-marquee/style.css";
 import { createApp } from "vue";
 import App from "./App.vue";
 
@@ -63,7 +63,7 @@ or
 
 ```js
 import Marquee from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/dist/index.css";
+import "@selemondev/vue3-marquee/style.css";
 ```
 
 ## Nuxt
