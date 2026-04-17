@@ -29,10 +29,11 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.3",
+    "@vitejs/plugin-vue": "^6.0.6",
     "vite-plus": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@10.27.0"
 }
