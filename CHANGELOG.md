@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.0
+
+[compare changes](https://github.com/selemondev/marquee/compare/v1.1.0...v1.2.0)
+
+### 🩹 Fixes
+
+- Gh CI & Release ([57cf2b2](https://github.com/selemondev/marquee/commit/57cf2b2))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.1.0
 
 [compare changes](https://github.com/selemondev/marquee/compare/v1.0.0...v1.1.0)
