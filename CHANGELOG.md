@@ -1,16 +1,10 @@
 # Changelog
 
-## v1.0.1
+## v1.0.0
 
-[compare changes](https://github.com/selemondev/marquee/compare/v1.0.0...v1.0.1)
+[compare changes](https://github.com/selemondev/marquee/compare/v0.0.12...v1.0.0)
 
-### 🏡 Chore
-
-- **release:** V1.0.0 ([9bd0f73](https://github.com/selemondev/marquee/commit/9bd0f73))
-
-### ❤️ Contributors
-
-- Selemondev <selemondev19@gmail.com>
+Stable release — API is now considered stable.
 
 ## v0.0.12
 
