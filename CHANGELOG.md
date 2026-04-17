@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4.0
+
+[compare changes](https://github.com/selemondev/marquee/compare/v1.3.0...v1.4.0)
+
+### 🏡 Chore
+
+- Hide author email ([992ec50](https://github.com/selemondev/marquee/commit/992ec50))
+
+### ❤️ Contributors
+
+- Selemondev
+
 ## v1.3.0
 
 [compare changes](https://github.com/selemondev/marquee/compare/v1.2.0...v1.3.0)
