@@ -20,7 +20,7 @@ if (explicit) {
   execSync("pnpx changelogen@latest", { stdio: "inherit" });
   version = explicit;
 } else {
-  execSync(`pnpx changelogen@latest --bump ${bumpFlag}`, { stdio: "inherit" });
+  execSync(`pnpx changelogen@latest --bump --hideAuthorEmail ${bumpFlag}`, { stdio: "inherit" });
   version = JSON.parse(readFileSync(ROOT, "utf8")).version;
   for (const p of SIBLINGS) {
     const pkg = JSON.parse(readFileSync(p, "utf8"));
