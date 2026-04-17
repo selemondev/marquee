@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.1
+
+[compare changes](https://github.com/selemondev/marquee/compare/v1.0.0...v1.0.1)
+
+### 🏡 Chore
+
+- **release:** V1.0.0 ([9bd0f73](https://github.com/selemondev/marquee/commit/9bd0f73))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.12
 
 [compare changes](https://github.com/selemondev/marquee/compare/v0.0.11...v0.0.12)
