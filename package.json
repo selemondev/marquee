@@ -20,9 +20,9 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs",
-    "release": "pnpm build && pnpm changeset version && pnpm dlx changelogen@latest && git add . && git commit -m \"chore(release): version packages\" && git push --follow-tags",
-    "prepare": "vp config"
+    "release": "changeset version",
+    "prepare": "vp config",
+    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
