@@ -1,6 +1,6 @@
 {
   "name": "@selemondev-marquee/root",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A Beautiful Marquee component for Vue",
   "keywords": [
     "marquee",

@@ -1,6 +1,6 @@
 {
   "name": "@selemondev/vue3-marquee",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": false,
   "files": [
     "dist"
