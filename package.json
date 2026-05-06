@@ -39,5 +39,5 @@
     "@vitejs/plugin-vue": "^6.0.6",
     "vite-plus": "catalog:"
   },
-  "packageManager": "pnpm@10.33.2"
+  "packageManager": "pnpm@10.33.4"
 }
