@@ -57,7 +57,7 @@
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.1.2",
   "inlinedDependencies": {
     "clsx": "2.1.1",
     "tailwind-merge": "2.6.1"
