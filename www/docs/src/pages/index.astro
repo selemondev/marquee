@@ -69,161 +69,175 @@ const testimonials: Testimonials[] = [
 ---
 
 <Layout>
-    <main class="flex flex-col space-y-4 px-2">
-        <div class="flex flex-col items-center space-y-1">
+    <main class="flex flex-col space-y-4 px-2" role="main">
+        <header class="flex flex-col items-center space-y-1">
             <h1 class="font-semibold text-xl lg:text-4xl">Vue Marquee</h1>
             <p class="secondary-text text-center">
-                A beautiful marquee component for Vue 3.
+                A beautiful marquee component for Vue 3 with TypeScript support, smooth animations, and full customization.
             </p>
-        </div>
-        <UIContainer>
-            <MarqueeAnimation testimonials={testimonials} client:load />
-        </UIContainer>
-        <div class="pt-3 flex flex-col space-y-2">
-            <h1 class="font-medium text-lg">Installation</h1>
+        </header>
+
+        <section aria-label="Demo">
+            <UIContainer>
+                <MarqueeAnimation testimonials={testimonials} client:load />
+            </UIContainer>
+        </section>
+
+        <article class="pt-3 flex flex-col space-y-2" id="installation">
+            <h2 class="font-medium text-lg">Installation</h2>
             <CustomCodeBlock client:only="vue" lang="bash" code={installCmd} />
-        </div>
+        </article>
+
+        <section id="global-registration" aria-labelledby="global-heading">
+            <UIContainer>
+                <h2 id="global-heading" class="font-normal text-lg">
+                    Register as a Global Component
+                </h2>
+                <CustomCodeBlock
+                    client:only="vue"
+                    lang="javascript"
+                    line-numbers={true}
+                    code={globalImportSnippet}
+                />
+            </UIContainer>
+        </section>
 
         <UIContainer>
-            <h1 class="font-normal text-lg">
-                Register it as a global component
-            </h1>
-            <CustomCodeBlock
-                client:only="vue"
-                lang="javascript"
-                line-numbers={true}
-                code={globalImportSnippet}
-            />
-        </UIContainer>
-
-        <UIContainer>
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-2" role="separator">
                 <span class="w-full h-px bg-gray-300"></span>
                 <span>or</span>
                 <span class="w-full h-px bg-gray-300"></span>
             </div>
         </UIContainer>
 
-        <UIContainer>
-            <h1 class="font-normal text-lg">
-                Register it as a local component
-            </h1>
-            <CustomCodeBlock
-                client:only="vue"
-                lang="javascript"
-                line-numbers={true}
-                code={localImportSnippet}
-            />
-        </UIContainer>
+        <section id="local-registration" aria-labelledby="local-heading">
+            <UIContainer>
+                <h2 id="local-heading" class="font-normal text-lg">
+                    Register as a Local Component
+                </h2>
+                <CustomCodeBlock
+                    client:only="vue"
+                    lang="javascript"
+                    line-numbers={true}
+                    code={localImportSnippet}
+                />
+            </UIContainer>
+        </section>
 
-        <UIContainer>
-            <h1 class="font-medium text-lg">Nuxt 3</h1>
-            <p class="secondary-text">
-                If you are using Nuxt 3, you can simply register it as a Nuxt
-                plugin as shown below:
-            </p>
-            <CustomCodeBlock
-                client:only="vue"
-                lang="javascript"
-                line-numbers={true}
-                code={nuxtPluginSnippet}
-            />
-        </UIContainer>
-        <UIContainer>
-            <h1 class="font-medium text-lg">Fade</h1>
-            <MarqueeAnimationFade testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={fadeCodeSnippet}
-            />
-        </UIContainer>
-        <UIContainer>
-            <h1 class="font-medium text-lg">Reverse</h1>
-            <MarqueeAnimationReverse testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={reverseCodeSnippet}
-            />
-        </UIContainer>
+        <section id="nuxt-3" aria-labelledby="nuxt-heading">
+            <UIContainer>
+                <h2 id="nuxt-heading" class="font-medium text-lg">Nuxt 3 Integration</h2>
+                <p class="secondary-text">
+                    If you are using Nuxt 3, you can register it as a Nuxt
+                    plugin as shown below:
+                </p>
+                <CustomCodeBlock
+                    client:only="vue"
+                    lang="javascript"
+                    line-numbers={true}
+                    code={nuxtPluginSnippet}
+                />
+            </UIContainer>
+        </section>
 
-        <UIContainer>
-            <h1 class="text-lg font-medium">Pause On Hover</h1>
-            <MarqueeAnimationPauseOnHover testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={pauseOnHoverSnippet}
-            />
-        </UIContainer>
+        <section id="examples" aria-label="Usage examples">
+            <UIContainer>
+                <h2 class="font-medium text-lg" id="fade">Fade Effect</h2>
+                <MarqueeAnimationFade testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={fadeCodeSnippet}
+                />
+            </UIContainer>
+            <UIContainer>
+                <h2 class="font-medium text-lg" id="reverse">Reverse Direction</h2>
+                <MarqueeAnimationReverse testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={reverseCodeSnippet}
+                />
+            </UIContainer>
 
-        <UIContainer>
-            <h1 class="text-lg font-medium">Vertical</h1>
-            <MarqueeAnimationVertical testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={verticalCodeSnippet}
-            />
-        </UIContainer>
+            <UIContainer>
+                <h2 class="text-lg font-medium" id="pause-on-hover">Pause On Hover</h2>
+                <MarqueeAnimationPauseOnHover testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={pauseOnHoverSnippet}
+                />
+            </UIContainer>
 
-        <UIContainer>
-            <h1 class="text-lg font-medium">Custom Gap And Speed</h1>
-            <MarqueeAnimationCustomGapAndSpeed testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={customGapAndSpeedSnippet}
-            />
-        </UIContainer>
+            <UIContainer>
+                <h2 class="text-lg font-medium" id="vertical">Vertical Marquee</h2>
+                <MarqueeAnimationVertical testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={verticalCodeSnippet}
+                />
+            </UIContainer>
 
-        <UIContainer>
-            <h1 class="text-lg font-medium">Reduced Motion</h1>
-            <p class="secondary-text items-center">
-                Disable animation when user device prefers reduced motion.
-            </p>
-            <MarqueeAnimationReducedMotion testimonials={testimonials} />
-            <CustomCodeBlock
-                client:only="vue"
-                line-numbers={true}
-                lang="html"
-                code={reducedMotionSnippet}
-            />
-        </UIContainer>
+            <UIContainer>
+                <h2 class="text-lg font-medium" id="custom-gap-speed">Custom Gap And Speed</h2>
+                <MarqueeAnimationCustomGapAndSpeed testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={customGapAndSpeedSnippet}
+                />
+            </UIContainer>
 
-        <div class="flex flex-col space-y-1">
-            <h1 class="font-medium text-lg">Feedback</h1>
-            <p class="secondary-text text-sm">
-                Found an issue? Submit it
+            <UIContainer>
+                <h2 class="text-lg font-medium" id="reduced-motion">Reduced Motion Support</h2>
+                <p class="secondary-text items-center">
+                    Disable animation when the user's device prefers reduced motion for improved accessibility.
+                </p>
+                <MarqueeAnimationReducedMotion testimonials={testimonials} />
+                <CustomCodeBlock
+                    client:only="vue"
+                    line-numbers={true}
+                    lang="html"
+                    code={reducedMotionSnippet}
+                />
+            </UIContainer>
+        </section>
+
+        <footer class="flex flex-col space-y-3">
+            <div class="flex flex-col space-y-1">
+                <h2 class="font-medium text-lg">Feedback</h2>
+                <p class="secondary-text text-sm">
+                    Found an issue? <a
+                        rel="noopener noreferrer"
+                        href="https://github.com/selemondev/marquee/issues/new"
+                        class="text-blue-500 hover:text-blue-600 transition-colors duration-200 ease-in decoration-dotted underline-offset-[5px] underline cursor-pointer"
+                    >
+                        Report it on GitHub
+                    </a>.
+                </p>
+            </div>
+            <nav aria-label="Social links" class="flex items-center space-x-2">
                 <a
+                    href="https://github.com/selemondev/marquee"
+                    title="View Vue Marquee source code on GitHub"
                     rel="noopener noreferrer"
-                    href="https://github.com/selemondev/marquee/issues/new"
-                    class="text-blue-500 hover:text-blue-600 transition-colors duration-200 ease-in decoration-dotted underline-offset-[5px] underline cursor-pointer"
+                    aria-label="Vue Marquee on GitHub"><GithubIcon class="icon" /></a
                 >
-                    here
-                </a>.
-            </p>
-        </div>
-        <div class="flex items-center space-x-2">
-            <a
-                href="https://github.com/selemondev/marquee"
-                title="Github"
-                rel="noopener noreferrer"
-                aria-label="Selemondev on GitHub"><GithubIcon class="icon" /></a
-            >
-            <a
-                href="https://twitter.com/selemondev"
-                title="Twitter"
-                rel="noopener noreferrer"
-                aria-label="Selemondev on Twitter"
-                ><TwitterIcon class="icon" /></a
-            >
-        </div>
+                <a
+                    href="https://twitter.com/selemondev"
+                    title="Follow Selemondev on Twitter"
+                    rel="noopener noreferrer"
+                    aria-label="Selemondev on Twitter"
+                    ><TwitterIcon class="icon" /></a
+                >
+            </nav>
+        </footer>
     </main>
 </Layout>

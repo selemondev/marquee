@@ -1,15 +1,85 @@
 ---
 import "@/styles/global.css";
+import { siteConfig, getCanonicalUrl, buildTitle } from "@/lib/seo-config";
+import {
+    buildWebSiteSchema,
+    buildOrganizationSchema,
+    buildSoftwareApplicationSchema,
+    buildBreadcrumbSchema,
+    buildTechArticleSchema,
+    toJsonLd,
+} from "@/lib/structured-data";
+
+interface Props {
+    title?: string;
+    description?: string;
+    path?: string;
+}
+
+const {
+    title,
+    description = siteConfig.description,
+    path = "/",
+} = Astro.props;
+
+const pageTitle = buildTitle(title);
+const canonicalUrl = getCanonicalUrl(path);
+
+const structuredData = [
+    buildWebSiteSchema(),
+    buildOrganizationSchema(),
+    buildSoftwareApplicationSchema(),
+    buildBreadcrumbSchema([{ name: "Home", url: "/" }]),
+    buildTechArticleSchema({
+        title: pageTitle,
+        description,
+        path,
+    }),
+];
 ---
 
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>{pageTitle}</title>
+        <meta name="title" content={pageTitle} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={siteConfig.keywords.join(", ")} />
+        <meta name="author" content={siteConfig.author} />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="application-name" content={siteConfig.name} />
+        <meta name="theme-color" content={siteConfig.themeColor} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+        <!-- Canonical -->
+        <link rel="canonical" href={canonicalUrl} />
+
+        <!-- OpenGraph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={siteConfig.name} />
+        <meta property="og:locale" content={siteConfig.locale} />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content={siteConfig.twitterHandle} />
+
+        <!-- Favicon -->
         <link
             rel="icon"
             href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%230cb800"
+            type="image/svg+xml"
         />
-        <meta name="viewport" content="width=device-width" />
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -21,13 +91,14 @@ import "@/styles/global.css";
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         />
-        <link rel="sitemap" href="/sitemap-index.xml" />
-        <meta name="generator" content={Astro.generator} />
-        <meta
-            name="description"
-            content="A beautiful marquee component for Vue."
-        />
-        <title>Vue Marquee</title>
+
+        <!-- Sitemap & Discovery -->
+        <link rel="sitemap" href="/sitemap.xml" />
+
+        <!-- Structured Data (JSON-LD) -->
+        {structuredData.map((schema) => (
+            <script type="application/ld+json" set:html={toJsonLd(schema)} />
+        ))}
     </head>
     <body>
         <div class="max-w-3xl mx-auto md:px-2">
