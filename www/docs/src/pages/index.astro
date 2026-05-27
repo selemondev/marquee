@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/default.astro";
 import UIContainer from "@/components/ui/ui-container.astro";
-import CustomCodeBlock from "@/components/ui/custom-code-block.vue";
+import CustomCodeBlock from "@/components/ui/custom-code-block.astro";
 import MarqueeAnimation from "@/components/ui/marquee-animation.vue";
 import MarqueeAnimationFade from "@/components/ui/marquee-animation-fade.vue";
 import MarqueeAnimationPauseOnHover from "@/components/ui/marquee-animation-pause-on-hover.vue";
@@ -73,7 +73,8 @@ const testimonials: Testimonials[] = [
         <header class="flex flex-col items-center space-y-1">
             <h1 class="font-semibold text-xl lg:text-4xl">Vue Marquee</h1>
             <p class="secondary-text text-center">
-                A beautiful marquee component for Vue 3 with TypeScript support, smooth animations, and full customization.
+                A beautiful marquee component for Vue 3 with TypeScript support,
+                smooth animations, and full customization.
             </p>
         </header>
 
@@ -85,7 +86,7 @@ const testimonials: Testimonials[] = [
 
         <article class="pt-3 flex flex-col space-y-2" id="installation">
             <h2 class="font-medium text-lg">Installation</h2>
-            <CustomCodeBlock client:only="vue" lang="bash" code={installCmd} />
+            <CustomCodeBlock lang="bash" code={installCmd} />
         </article>
 
         <section id="global-registration" aria-labelledby="global-heading">
@@ -94,7 +95,6 @@ const testimonials: Testimonials[] = [
                     Register as a Global Component
                 </h2>
                 <CustomCodeBlock
-                    client:only="vue"
                     lang="javascript"
                     line-numbers={true}
                     code={globalImportSnippet}
@@ -116,7 +116,6 @@ const testimonials: Testimonials[] = [
                     Register as a Local Component
                 </h2>
                 <CustomCodeBlock
-                    client:only="vue"
                     lang="javascript"
                     line-numbers={true}
                     code={localImportSnippet}
@@ -126,13 +125,14 @@ const testimonials: Testimonials[] = [
 
         <section id="nuxt-3" aria-labelledby="nuxt-heading">
             <UIContainer>
-                <h2 id="nuxt-heading" class="font-medium text-lg">Nuxt 3 Integration</h2>
+                <h2 id="nuxt-heading" class="font-medium text-lg">
+                    Nuxt 3 Integration
+                </h2>
                 <p class="secondary-text">
                     If you are using Nuxt 3, you can register it as a Nuxt
                     plugin as shown below:
                 </p>
                 <CustomCodeBlock
-                    client:only="vue"
                     lang="javascript"
                     line-numbers={true}
                     code={nuxtPluginSnippet}
@@ -145,17 +145,17 @@ const testimonials: Testimonials[] = [
                 <h2 class="font-medium text-lg" id="fade">Fade Effect</h2>
                 <MarqueeAnimationFade testimonials={testimonials} />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={fadeCodeSnippet}
                 />
             </UIContainer>
             <UIContainer>
-                <h2 class="font-medium text-lg" id="reverse">Reverse Direction</h2>
+                <h2 class="font-medium text-lg" id="reverse">
+                    Reverse Direction
+                </h2>
                 <MarqueeAnimationReverse testimonials={testimonials} />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={reverseCodeSnippet}
@@ -163,10 +163,11 @@ const testimonials: Testimonials[] = [
             </UIContainer>
 
             <UIContainer>
-                <h2 class="text-lg font-medium" id="pause-on-hover">Pause On Hover</h2>
+                <h2 class="text-lg font-medium" id="pause-on-hover">
+                    Pause On Hover
+                </h2>
                 <MarqueeAnimationPauseOnHover testimonials={testimonials} />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={pauseOnHoverSnippet}
@@ -174,10 +175,11 @@ const testimonials: Testimonials[] = [
             </UIContainer>
 
             <UIContainer>
-                <h2 class="text-lg font-medium" id="vertical">Vertical Marquee</h2>
+                <h2 class="text-lg font-medium" id="vertical">
+                    Vertical Marquee
+                </h2>
                 <MarqueeAnimationVertical testimonials={testimonials} />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={verticalCodeSnippet}
@@ -185,10 +187,13 @@ const testimonials: Testimonials[] = [
             </UIContainer>
 
             <UIContainer>
-                <h2 class="text-lg font-medium" id="custom-gap-speed">Custom Gap And Speed</h2>
-                <MarqueeAnimationCustomGapAndSpeed testimonials={testimonials} />
+                <h2 class="text-lg font-medium" id="custom-gap-speed">
+                    Custom Gap And Speed
+                </h2>
+                <MarqueeAnimationCustomGapAndSpeed
+                    testimonials={testimonials}
+                />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={customGapAndSpeedSnippet}
@@ -196,13 +201,15 @@ const testimonials: Testimonials[] = [
             </UIContainer>
 
             <UIContainer>
-                <h2 class="text-lg font-medium" id="reduced-motion">Reduced Motion Support</h2>
+                <h2 class="text-lg font-medium" id="reduced-motion">
+                    Reduced Motion Support
+                </h2>
                 <p class="secondary-text items-center">
-                    Disable animation when the user's device prefers reduced motion for improved accessibility.
+                    Disable animation when the user's device prefers reduced
+                    motion for improved accessibility.
                 </p>
                 <MarqueeAnimationReducedMotion testimonials={testimonials} />
                 <CustomCodeBlock
-                    client:only="vue"
                     line-numbers={true}
                     lang="html"
                     code={reducedMotionSnippet}
@@ -228,7 +235,8 @@ const testimonials: Testimonials[] = [
                     href="https://github.com/selemondev/marquee"
                     title="View Vue Marquee source code on GitHub"
                     rel="noopener noreferrer"
-                    aria-label="Vue Marquee on GitHub"><GithubIcon class="icon" /></a
+                    aria-label="Vue Marquee on GitHub"
+                    ><GithubIcon class="icon" /></a
                 >
                 <a
                     href="https://twitter.com/selemondev"
