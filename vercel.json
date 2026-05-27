@@ -1,3 +1,4 @@
 {
-  "outputDirectory": "www/docs/.vercel/output"
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install --no-frozen-lockfile"
 }
