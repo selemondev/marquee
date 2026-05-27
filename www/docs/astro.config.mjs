@@ -12,6 +12,7 @@ export default defineConfig({
     plugins: tailwindcss(),
   },
 
+  output: "server",
   integrations: [vue()],
   adapter: vercel(),
 });
