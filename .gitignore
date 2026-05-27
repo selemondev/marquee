@@ -9,3 +9,4 @@ dist
 .zed
 .vite-hooks
 .pnpm-store
+.vercel
