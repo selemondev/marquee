@@ -1,7 +1,7 @@
-import { defineMiddleware } from "astro:middleware";
+import type { MiddlewareHandler } from "astro";
 import { siteConfig } from "@/lib/seo-config";
 
-export const onRequest = defineMiddleware(async (context, next) => {
+export const onRequest: MiddlewareHandler = async (context, next) => {
   const { request, url } = context;
 
   // Content negotiation: return markdown for AI agents
@@ -43,7 +43,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   return response;
-});
+};
 
 function generateMarkdownForPath(pathname: string): string | null {
   if (pathname === "/" || pathname === "") {

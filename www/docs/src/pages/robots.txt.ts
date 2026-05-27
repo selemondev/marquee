@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 
 export const prerender = true;
 
-const SITE_URL = "https://vue-marquee.vercel.app";
+const SITE_URL = "https://vue-marquee.selemon.dev";
 const SITE_NAME = "Vue Marquee";
 
 export const GET: APIRoute = () => {

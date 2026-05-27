@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Vue Marquee",
   description:
     "A beautiful, performant marquee component for Vue 3 with TypeScript support. Create smooth scrolling animations with fade, reverse, vertical, pause-on-hover, and custom speed options.",
-  url: "https://vue-marquee.vercel.app",
+  url: "https://vue-marquee.selemon.dev",
   repository: "https://github.com/selemondev/marquee",
   author: "Selemondev",
   twitterHandle: "@selemondev",
