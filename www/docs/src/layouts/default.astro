@@ -104,5 +104,56 @@ const structuredData = [
         <div class="max-w-3xl mx-auto md:px-2">
             <slot />
         </div>
+        <script>
+            if (navigator && "modelContext" in navigator) {
+                (navigator as any).modelContext.provideContext({
+                    tools: [
+                        {
+                            name: "search-docs",
+                            description: "Search Vue Marquee documentation for component usage, props, and examples",
+                            inputSchema: {
+                                type: "object",
+                                properties: {
+                                    query: {
+                                        type: "string",
+                                        description: "Search query for documentation"
+                                    }
+                                },
+                                required: ["query"]
+                            },
+                            execute: async (input: { query: string }) => {
+                                return {
+                                    result: `Search Vue Marquee docs for: ${input.query}. Visit https://vue-marquee.selemon.dev for full documentation.`
+                                };
+                            }
+                        },
+                        {
+                            name: "get-install-command",
+                            description: "Get the installation command for Vue Marquee",
+                            inputSchema: {
+                                type: "object",
+                                properties: {
+                                    packageManager: {
+                                        type: "string",
+                                        enum: ["npm", "pnpm", "yarn", "bun"],
+                                        description: "Package manager to use"
+                                    }
+                                },
+                                required: ["packageManager"]
+                            },
+                            execute: async (input: { packageManager: string }) => {
+                                const commands: Record<string, string> = {
+                                    npm: "npm install @selemondev/vue3-marquee",
+                                    pnpm: "pnpm add @selemondev/vue3-marquee",
+                                    yarn: "yarn add @selemondev/vue3-marquee",
+                                    bun: "bun add @selemondev/vue3-marquee"
+                                };
+                                return { result: commands[input.packageManager] || commands.npm };
+                            }
+                        }
+                    ]
+                });
+            }
+        </script>
     </body>
 </html>
