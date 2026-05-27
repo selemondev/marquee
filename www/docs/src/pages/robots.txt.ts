@@ -42,6 +42,9 @@ Disallow: /
 
 User-agent: CCBot
 Allow: /
+
+# Content Signals (draft-romm-aipref-contentsignals)
+Content-Signal: ai-train=no, search=yes, ai-input=no
 `;
 
   return new Response(content, {

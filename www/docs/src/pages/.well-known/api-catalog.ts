@@ -2,38 +2,43 @@ import type { APIRoute } from "astro";
 
 export const prerender = true;
 
-const SITE_NAME = "Vue Marquee";
 const SITE_URL = "https://vue-marquee.selemon.dev";
-const SITE_DESCRIPTION =
-  "A beautiful, performant marquee component for Vue 3 with TypeScript support. Create smooth scrolling animations with fade, reverse, vertical, pause-on-hover, and custom speed options.";
 const REPOSITORY = "https://github.com/selemondev/marquee";
 
 export const GET: APIRoute = () => {
   const catalog = {
-    apis: [
+    linkset: [
       {
-        name: SITE_NAME,
-        description: SITE_DESCRIPTION,
-        humanUrl: SITE_URL,
-        baseUrl: SITE_URL,
-        properties: [
+        anchor: SITE_URL,
+        "service-desc": [
           {
-            type: "x-documentation",
-            url: SITE_URL,
-          },
-          {
-            type: "x-source-code",
-            url: REPOSITORY,
+            href: `${SITE_URL}/.well-known/agent-skills/index.json`,
+            type: "application/json",
           },
         ],
-        tags: ["vue", "component", "marquee", "animation", "typescript"],
+        "service-doc": [
+          {
+            href: SITE_URL,
+            type: "text/html",
+          },
+          {
+            href: REPOSITORY,
+            type: "text/html",
+          },
+        ],
+        status: [
+          {
+            href: SITE_URL,
+            type: "text/html",
+          },
+        ],
       },
     ],
   };
 
   return new Response(JSON.stringify(catalog, null, 2), {
     headers: {
-      "Content-Type": "application/json; charset=utf-8",
+      "Content-Type": "application/linkset+json; charset=utf-8",
       "Cache-Control": "public, max-age=86400",
     },
   });

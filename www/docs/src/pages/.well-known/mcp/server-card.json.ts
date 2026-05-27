@@ -10,10 +10,12 @@ const REPOSITORY = "https://github.com/selemondev/marquee";
 
 export const GET: APIRoute = () => {
   const serverCard = {
-    name: SITE_NAME,
+    serverInfo: {
+      name: SITE_NAME,
+      version: "1.4.0",
+    },
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    version: "1.4.0",
     capabilities: {
       documentation: true,
       examples: true,
