@@ -45,7 +45,7 @@
     "@tsconfig/node18": "^18.2.6",
     "@tsdown/css": "^0.21.9",
     "@vue/tsconfig": "^0.7.0",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.0",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "unplugin-vue": "^7.1.0",
