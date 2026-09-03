@@ -12,7 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^10.0.4",
+    "@astrojs/vercel": "^11.0.0",
     "@astrojs/vue": "^6.0.1",
     "@selemondev/vue3-marquee": "workspace:*",
     "@tailwindcss/vite": "^4.2.2",
