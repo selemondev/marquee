@@ -1,3 +1,4 @@
 import Marquee from "@/components/Marquee.vue";
-import "@/assets/css/output.css";
+
+export { Marquee };
 export default Marquee;

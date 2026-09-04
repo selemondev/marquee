@@ -6,4 +6,7 @@ export default defineConfig({
   },
   fmt: {},
   lint: { options: { typeAware: true, typeCheck: true } },
+  test: {
+    projects: ["packages/*"],
+  },
 });

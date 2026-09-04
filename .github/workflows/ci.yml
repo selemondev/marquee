@@ -61,3 +61,6 @@ jobs:
 
       - name: Build
         run: pnpm build:marquee:package
+
+      - name: Test
+        run: pnpm test

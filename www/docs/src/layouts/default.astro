@@ -1,4 +1,5 @@
 ---
+import "@fontsource-variable/inter";
 import "@/styles/global.css";
 import { siteConfig, getCanonicalUrl, buildTitle } from "@/lib/seo-config";
 import {
@@ -43,6 +44,39 @@ const structuredData = [
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Theme: apply stored/system scheme before first paint, keep theme-color and toggles in sync. -->
+        <meta name="theme-color" content={siteConfig.themeColor.light} />
+        <script is:inline define:vars={{ colors: siteConfig.themeColor }}>
+            (() => {
+                const root = document.documentElement;
+                const apply = (dark) => {
+                    root.classList.toggle("dark", dark);
+                    document.querySelector('meta[name="theme-color"]').content = dark ? colors.dark : colors.light;
+                    for (const toggle of document.querySelectorAll("[data-theme-toggle]")) {
+                        toggle.setAttribute("aria-pressed", String(dark));
+                    }
+                };
+                let stored = null;
+                try {
+                    stored = localStorage.getItem("theme");
+                } catch {
+                    // Storage blocked: fall through to the system preference.
+                }
+                apply(stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+                document.addEventListener("DOMContentLoaded", () => apply(root.classList.contains("dark")));
+                document.addEventListener("click", (event) => {
+                    if (!event.target.closest("[data-theme-toggle]")) return;
+                    const dark = !root.classList.contains("dark");
+                    apply(dark);
+                    try {
+                        localStorage.setItem("theme", dark ? "dark" : "light");
+                    } catch {
+                        // Persistence unavailable; the toggle still works for this page.
+                    }
+                });
+            })();
+        </script>
+
         <!-- Primary Meta Tags -->
         <title>{pageTitle}</title>
         <meta name="title" content={pageTitle} />
@@ -51,7 +85,6 @@ const structuredData = [
         <meta name="author" content={siteConfig.author} />
         <meta name="generator" content={Astro.generator} />
         <meta name="application-name" content={siteConfig.name} />
-        <meta name="theme-color" content={siteConfig.themeColor} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <!-- Canonical -->
@@ -75,21 +108,8 @@ const structuredData = [
         <!-- Favicon -->
         <link
             rel="icon"
-            href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%230cb800"
+            href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%2342b883"
             type="image/svg+xml"
-        />
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="preload"
-            as="style"
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         />
 
         <!-- Sitemap & Discovery -->
@@ -101,9 +121,7 @@ const structuredData = [
         ))}
     </head>
     <body>
-        <div class="max-w-3xl mx-auto md:px-2">
-            <slot />
-        </div>
+        <slot />
         <script>
             if (navigator && "modelContext" in navigator) {
                 (navigator as any).modelContext.provideContext({

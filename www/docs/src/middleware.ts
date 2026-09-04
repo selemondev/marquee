@@ -1,16 +1,27 @@
 import type { MiddlewareHandler } from "astro";
 import { siteConfig } from "@/lib/seo-config";
+import {
+  customGapAndSpeedSnippet,
+  fadeCodeSnippet,
+  installCommands,
+  pauseOnHoverSnippet,
+  propDocs,
+  registerSnippets,
+  reducedMotionSnippet,
+  reverseCodeSnippet,
+  verticalCodeSnippet,
+} from "@/snippets";
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const { request, url } = context;
 
-  // Content negotiation: return markdown for AI agents
-  const accept = request.headers.get("accept") || "";
+  // Content negotiation: return markdown for AI agents.
+  // Path checks come first so prerendered routes never touch request headers.
   if (
-    accept.includes("text/markdown") &&
     !url.pathname.startsWith("/.well-known") &&
     !url.pathname.endsWith(".xml") &&
-    !url.pathname.endsWith(".txt")
+    !url.pathname.endsWith(".txt") &&
+    (request.headers.get("accept") || "").includes("text/markdown")
   ) {
     const markdown = generateMarkdownForPath(url.pathname);
     if (markdown) {
@@ -46,118 +57,48 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 };
 
 function generateMarkdownForPath(pathname: string): string | null {
-  if (pathname === "/" || pathname === "") {
-    return `# Vue Marquee
+  if (pathname !== "/" && pathname !== "") return null;
 
-A beautiful, performant marquee component for Vue 3 with TypeScript support.
+  const fence = (lang: string, code: string) => `\`\`\`${lang}\n${code}\n\`\`\``;
+  const examples: Array<[string, string]> = [
+    ["Fade", fadeCodeSnippet],
+    ["Reverse", reverseCodeSnippet],
+    ["Pause on Hover", pauseOnHoverSnippet],
+    ["Vertical", verticalCodeSnippet],
+    ["Custom Gap and Speed", customGapAndSpeedSnippet],
+    ["Reduced Motion", reducedMotionSnippet],
+  ];
+
+  return `# ${siteConfig.name}
+
+${siteConfig.description}
 
 ## Installation
 
-\`\`\`bash
-npm install @selemondev/vue3-marquee
-\`\`\`
+${fence("bash", installCommands.pnpm)}
 
 ## Usage
 
-### Global Registration
-
-\`\`\`javascript
-import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/style.css"
-import { createApp } from 'vue'
-import App from './App.vue'
-
-const app = createApp(App);
-app.component('Marquee', Marquee)
-app.mount('#app')
-\`\`\`
-
-### Local Registration
-
-\`\`\`javascript
-import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/style.css"
-\`\`\`
-
-### Nuxt 3 Plugin
-
-\`\`\`javascript
-// ~/plugins/marquee.ts
-import { Marquee } from "@selemondev/vue3-marquee";
-import "@selemondev/vue3-marquee/style.css"
-export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.component('Marquee', Marquee)
-})
-\`\`\`
+${Object.entries(registerSnippets)
+  .map(([title, { code, lang }]) => `### ${title}\n\n${fence(lang, code)}`)
+  .join("\n\n")}
 
 ## Examples
 
-### Fade
+${examples.map(([title, code]) => `### ${title}\n\n${fence("vue", code)}`).join("\n\n")}
 
-\`\`\`html
-<Marquee :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
+## Props
 
-### Reverse
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+${propDocs.map((p) => `| ${p.name} | \`${p.type}\` | \`${p.def}\` | ${p.desc} |`).join("\n")}
 
-\`\`\`html
-<Marquee :reverse="true" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
-
-### Pause on Hover
-
-\`\`\`html
-<Marquee :pauseOnHover="true" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
-
-### Vertical
-
-\`\`\`html
-<Marquee class="h-100" direction="up" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
-
-### Custom Gap and Speed
-
-\`\`\`html
-<Marquee class="gap-12 [--duration:5s] [--gap:3rem]" innerClassName="gap-[3rem]" :fade="true">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
-
-### Reduced Motion
-
-\`\`\`html
-<Marquee class="py-4 motion-reduce:overflow-auto" innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
-  <div>Content 1</div>
-  <div>Content 2</div>
-  <div>Content 3</div>
-</Marquee>
-\`\`\`
+Other attributes are forwarded to the outer container.
 
 ## Links
 
-- [GitHub Repository](https://github.com/selemondev/marquee)
+- [GitHub Repository](${siteConfig.repository})
 - [npm Package](https://www.npmjs.com/package/@selemondev/vue3-marquee)
-- [Report Issues](https://github.com/selemondev/marquee/issues/new)
+- [Report Issues](${siteConfig.repository}/issues/new)
 `;
-  }
-  return null;
 }

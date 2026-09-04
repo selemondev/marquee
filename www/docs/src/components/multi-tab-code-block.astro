@@ -1,0 +1,52 @@
+---
+import type { BundledLanguage } from "shiki";
+import CodeSnippet from "./code-snippet.astro";
+
+interface Props {
+    label: string;
+    tabs: Record<string, { code: string; lang: BundledLanguage }>;
+}
+
+const { label, tabs } = Astro.props;
+const entries = Object.entries(tabs);
+---
+
+<div class="overflow-hidden rounded-lg border border-line bg-code" data-tabs>
+    <div class="flex items-center gap-1 border-b border-line px-2 py-1.5" role="tablist" aria-label={label}>
+        {
+            entries.map(([name], i) => (
+                <button
+                    type="button"
+                    role="tab"
+                    aria-selected={i === 0}
+                    data-tab={name}
+                    class="rounded-md px-2.5 py-1 font-mono text-xs text-muted transition-colors hover:bg-fg/5 hover:text-fg aria-selected:bg-fg/8 aria-selected:text-fg"
+                >
+                    {name}
+                </button>
+            ))
+        }
+    </div>
+    {
+        entries.map(([name, { code, lang }], i) => (
+            <div role="tabpanel" data-panel={name} hidden={i !== 0} class="[&>div]:rounded-none [&>div]:border-0">
+                <CodeSnippet code={code} lang={lang} />
+            </div>
+        ))
+    }
+</div>
+
+<script>
+    for (const root of document.querySelectorAll<HTMLElement>("[data-tabs]")) {
+        root.addEventListener("click", (event) => {
+            const tab = (event.target as Element).closest<HTMLElement>("[data-tab]");
+            if (!tab) return;
+            for (const t of root.querySelectorAll<HTMLElement>("[data-tab]")) {
+                t.setAttribute("aria-selected", String(t === tab));
+            }
+            for (const panel of root.querySelectorAll<HTMLElement>("[data-panel]")) {
+                panel.hidden = panel.dataset.panel !== tab.dataset.tab;
+            }
+        });
+    }
+</script>

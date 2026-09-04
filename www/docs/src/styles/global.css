@@ -1,37 +1,71 @@
 @import "tailwindcss";
 @import "@selemondev/vue3-marquee/style.css";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --font-geist: "Geist", system-ui, sans-serif;
+/* Light palette is the default; `html.dark` overrides below. */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: #fcfcfc;
+  --color-fg: #18181b;
+  --color-muted: #6b6b73;
+  --color-line: rgb(0 0 0 / 0.1);
+  --color-line-strong: rgb(0 0 0 / 0.3);
+  --color-surface: rgb(0 0 0 / 0.03);
+  --color-card: #ffffff;
+  --color-code: #f6f6f7;
+  --color-accent: #35a372;
 }
 
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
+html.dark {
+  --color-bg: #0a0a0b;
+  --color-fg: #ededef;
+  --color-muted: #8f8f95;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-line-strong: rgb(255 255 255 / 0.28);
+  --color-surface: rgb(255 255 255 / 0.03);
+  --color-card: #111113;
+  --color-code: #0d0d0f;
+  --color-accent: #42b883;
+}
+
+/* Dashed rail drawn with a gradient so it stays crisp at 1px. */
+@utility hairline-y {
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-line) 50%, transparent 50%) 0 0 / 1px 8px;
+}
+
+/* Small square "handle" placed at grid intersections, centered on the crossing. */
+@utility handle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line-strong);
+  transform: translate(-50%, -50%);
+}
+
+html {
+  color-scheme: light;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 60%, transparent);
 }
 
 @layer base {
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
-  }
-  body {
-    @apply font-geist min-h-screen w-full px-2 mt-26 mb-6 text-zinc-800 bg-gray-50;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-}
-
-@layer components {
-  .secondary-text {
-    @apply text-[#515158];
-  }
-
-  .icon {
-    @apply text-gray-600 hover:text-black transition-colors duration-200 ease-in;
   }
 }

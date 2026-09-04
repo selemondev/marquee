@@ -8,7 +8,7 @@ export const siteConfig = {
   repository: "https://github.com/selemondev/marquee",
   author: "Selemondev",
   twitterHandle: "@selemondev",
-  themeColor: "#0cb800",
+  themeColor: { light: "#fcfcfc", dark: "#0a0a0b" },
   locale: "en_US",
   keywords: [
     "vue marquee",

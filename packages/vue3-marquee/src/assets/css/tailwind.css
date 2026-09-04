@@ -1,6 +1,12 @@
-@import "tailwindcss/utilities";
-@import "tailwindcss/theme";
-@plugin 'tailwindcss-animate';
+/*
+ * Everything is emitted into the `components` cascade layer so that a consumer's
+ * own utilities (Tailwind's `utilities` layer or any unlayered CSS) always win over
+ * the classes baked into the component.
+ */
+@import "tailwindcss/theme" layer(components) source(none);
+@import "tailwindcss/utilities" layer(components) source(none);
+@source "../../components";
+@plugin "tailwindcss-animate";
 
 @theme {
   --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;

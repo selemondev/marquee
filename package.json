@@ -2,14 +2,16 @@
   "name": "@selemondev-marquee/root",
   "version": "1.4.0",
   "private": true,
-  "description": "A Beautiful Marquee component for Vue",
+  "description": "A Beautiful Marquee component for Vue 3 ✨",
   "keywords": [
     "marquee",
+    "nuxt",
     "tailwindcss",
     "typescript",
     "vue",
     "vue3"
   ],
+  "homepage": "https://vue-marquee.selemon.dev",
   "bugs": {
     "url": "https://github.com/selemondev/marquee/issues"
   },
@@ -17,27 +19,30 @@
   "author": "Selemondev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/selemondev/marquee"
+    "url": "git+https://github.com/selemondev/marquee.git"
   },
   "type": "module",
   "scripts": {
+    "prepare": "vp config",
+    "build": "pnpm build:marquee:package && pnpm build:astro:docs && mkdir -p .vercel && cp -r www/docs/.vercel/output .vercel/output",
+    "build:marquee:package": "pnpm --filter @selemondev/vue3-marquee build:package",
+    "build:astro:docs": "pnpm --filter docs build:docs",
+    "dev:docs": "pnpm --filter docs dev",
+    "check": "vp check",
+    "fmt": "vp fmt",
+    "lint": "vp lint",
+    "test": "pnpm --filter @selemondev/vue3-marquee test",
     "generate:patch:release": "node scripts/release.mjs",
     "generate:minor:release": "node scripts/release.mjs --minor",
-    "generate:major:release": "node scripts/release.mjs --major",
-    "prepare": "vp config",
-    "lint": "vp lint",
-    "build": "pnpm --filter @selemondev/vue3-marquee build:package && pnpm --filter docs build:docs && cp -r www/docs/.vercel/output .vercel/output",
-    "build:astro:docs": "pnpm --filter docs build:docs",
-    "build:marquee:package": "pnpm --filter @selemondev/vue3-marquee build:package"
-  },
-  "dependencies": {
-    "@types/node": "^25.9.1",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.1"
+    "generate:major:release": "node scripts/release.mjs --major"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.7",
+    "@types/node": "^26.4.1",
     "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": ">=10"
   },
   "packageManager": "pnpm@10.34.0"
 }
