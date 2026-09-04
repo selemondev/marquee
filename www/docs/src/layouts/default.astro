@@ -44,12 +44,36 @@ const structuredData = [
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Apply the stored/system theme before first paint to avoid a flash. -->
-        <script is:inline>
+        <!-- Theme: apply stored/system scheme before first paint, keep theme-color and toggles in sync. -->
+        <meta name="theme-color" content={siteConfig.themeColor.light} />
+        <script is:inline define:vars={{ colors: siteConfig.themeColor }}>
             (() => {
-                const stored = localStorage.getItem("theme");
-                const dark = stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-                document.documentElement.classList.toggle("dark", dark);
+                const root = document.documentElement;
+                const apply = (dark) => {
+                    root.classList.toggle("dark", dark);
+                    document.querySelector('meta[name="theme-color"]').content = dark ? colors.dark : colors.light;
+                    for (const toggle of document.querySelectorAll("[data-theme-toggle]")) {
+                        toggle.setAttribute("aria-pressed", String(dark));
+                    }
+                };
+                let stored = null;
+                try {
+                    stored = localStorage.getItem("theme");
+                } catch {
+                    // Storage blocked: fall through to the system preference.
+                }
+                apply(stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+                document.addEventListener("DOMContentLoaded", () => apply(root.classList.contains("dark")));
+                document.addEventListener("click", (event) => {
+                    if (!event.target.closest("[data-theme-toggle]")) return;
+                    const dark = !root.classList.contains("dark");
+                    apply(dark);
+                    try {
+                        localStorage.setItem("theme", dark ? "dark" : "light");
+                    } catch {
+                        // Persistence unavailable; the toggle still works for this page.
+                    }
+                });
             })();
         </script>
 
@@ -61,8 +85,6 @@ const structuredData = [
         <meta name="author" content={siteConfig.author} />
         <meta name="generator" content={Astro.generator} />
         <meta name="application-name" content={siteConfig.name} />
-        <meta name="theme-color" content={siteConfig.themeColor.light} media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content={siteConfig.themeColor.dark} media="(prefers-color-scheme: dark)" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <!-- Canonical -->
@@ -100,15 +122,6 @@ const structuredData = [
     </head>
     <body>
         <slot />
-        <script>
-            const root = document.documentElement;
-            for (const toggle of document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]")) {
-                toggle.addEventListener("click", () => {
-                    const dark = root.classList.toggle("dark");
-                    localStorage.setItem("theme", dark ? "dark" : "light");
-                });
-            }
-        </script>
         <script>
             if (navigator && "modelContext" in navigator) {
                 (navigator as any).modelContext.provideContext({
