@@ -8,6 +8,8 @@ import MultiTabCodeBlock from "@/components/multi-tab-code-block.astro";
 import MarqueeDemo from "@/components/marquee-demo.vue";
 import LogoMarquee from "@/components/logo-marquee.vue";
 import GithubIcon from "@/components/icons/github-icon.vue";
+import SunIcon from "@/components/icons/sun-icon.vue";
+import MoonIcon from "@/components/icons/moon-icon.vue";
 import { siteConfig } from "@/lib/seo-config";
 import {
     customGapAndSpeedSnippet,
@@ -70,6 +72,15 @@ const installTabs = Object.fromEntries(
                     >
                         <GithubIcon class="size-4" />
                     </a>
+                    <button
+                        type="button"
+                        data-theme-toggle
+                        aria-label="Toggle color scheme"
+                        class="inline-flex size-8 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-line-strong hover:text-fg"
+                    >
+                        <SunIcon class="size-4 dark:hidden" />
+                        <MoonIcon class="hidden size-4 dark:block" />
+                    </button>
                 </div>
             </div>
         </header>

@@ -44,6 +44,15 @@ const structuredData = [
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Apply the stored/system theme before first paint to avoid a flash. -->
+        <script is:inline>
+            (() => {
+                const stored = localStorage.getItem("theme");
+                const dark = stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.classList.toggle("dark", dark);
+            })();
+        </script>
+
         <!-- Primary Meta Tags -->
         <title>{pageTitle}</title>
         <meta name="title" content={pageTitle} />
@@ -52,7 +61,8 @@ const structuredData = [
         <meta name="author" content={siteConfig.author} />
         <meta name="generator" content={Astro.generator} />
         <meta name="application-name" content={siteConfig.name} />
-        <meta name="theme-color" content={siteConfig.themeColor} />
+        <meta name="theme-color" content={siteConfig.themeColor.light} media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content={siteConfig.themeColor.dark} media="(prefers-color-scheme: dark)" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <!-- Canonical -->
@@ -90,6 +100,15 @@ const structuredData = [
     </head>
     <body>
         <slot />
+        <script>
+            const root = document.documentElement;
+            for (const toggle of document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]")) {
+                toggle.addEventListener("click", () => {
+                    const dark = root.classList.toggle("dark");
+                    localStorage.setItem("theme", dark ? "dark" : "light");
+                });
+            }
+        </script>
         <script>
             if (navigator && "modelContext" in navigator) {
                 (navigator as any).modelContext.provideContext({
