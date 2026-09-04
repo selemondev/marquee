@@ -15,7 +15,8 @@ const icon = (paths: string) =>
 
 const html = await codeToHtml(code.trim(), {
     lang,
-    theme: "vitesse-black",
+    themes: { light: "vitesse-light", dark: "vitesse-black" },
+    defaultColor: "light-dark()",
     transformers: [
         transformerCopyButton({
             duration: 2000,
@@ -23,9 +24,9 @@ const html = await codeToHtml(code.trim(), {
             copyIcon: icon(""),
             successIcon: icon("%3Cpath d='m9 14 2 2 4-4'/%3E"),
             cssVariables: `:root {
-  --button-border-color: rgb(255 255 255 / 0.12);
-  --button-bg: rgb(255 255 255 / 0.04);
-  --button-bg-hover: rgb(255 255 255 / 0.1);
+  --button-border-color: light-dark(rgb(0 0 0 / 0.12), rgb(255 255 255 / 0.12));
+  --button-bg: light-dark(rgb(0 0 0 / 0.03), rgb(255 255 255 / 0.04));
+  --button-bg-hover: light-dark(rgb(0 0 0 / 0.08), rgb(255 255 255 / 0.1));
   --button-top: 10px;
   --button-right: 10px;
   --button-z-index: 10;
@@ -58,7 +59,7 @@ const html = await codeToHtml(code.trim(), {
         overflow-x: auto;
         padding-bottom: 4px;
         scrollbar-width: thin;
-        scrollbar-color: rgb(255 255 255 / 0.2) transparent;
+        scrollbar-color: light-dark(rgb(0 0 0 / 0.2), rgb(255 255 255 / 0.2)) transparent;
         font-family: var(--font-mono);
         font-size: 13.5px;
         line-height: 1.7;
