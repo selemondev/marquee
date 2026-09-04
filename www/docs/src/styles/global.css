@@ -1,10 +1,25 @@
 @import "tailwindcss";
 @import "@selemondev/vue3-marquee/style.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light palette is the default; `html.dark` overrides below. */
 @theme {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
+  --color-bg: #fcfcfc;
+  --color-fg: #18181b;
+  --color-muted: #6b6b73;
+  --color-line: rgb(0 0 0 / 0.1);
+  --color-line-strong: rgb(0 0 0 / 0.3);
+  --color-surface: rgb(0 0 0 / 0.03);
+  --color-card: #ffffff;
+  --color-code: #f6f6f7;
+  --color-accent: #35a372;
+}
+
+html.dark {
   --color-bg: #0a0a0b;
   --color-fg: #ededef;
   --color-muted: #8f8f95;
@@ -33,11 +48,15 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
   background: var(--color-bg);
   color: var(--color-fg);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 ::selection {

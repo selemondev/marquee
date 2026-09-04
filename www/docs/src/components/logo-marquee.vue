@@ -10,7 +10,7 @@ import { logos } from "@/lib/testimonials";
       :key="logo"
       :alt="logo"
       :src="`https://www.vectorlogo.zone/logos/${logo}/${logo}-ar21.svg`"
-      class="h-12 w-auto opacity-60 brightness-0 invert transition-opacity hover:opacity-100"
+      class="h-12 w-auto opacity-60 brightness-0 transition-opacity hover:opacity-100 dark:invert"
       loading="lazy"
     />
   </Marquee>
