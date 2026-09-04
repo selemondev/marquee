@@ -1,4 +1,5 @@
 ---
+import "@fontsource-variable/inter";
 import "@/styles/global.css";
 import { siteConfig, getCanonicalUrl, buildTitle } from "@/lib/seo-config";
 import {
@@ -75,21 +76,8 @@ const structuredData = [
         <!-- Favicon -->
         <link
             rel="icon"
-            href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%230cb800"
+            href="https://api.iconify.design/fluent:weather-blowing-snow-24-regular.svg?color=%2342b883"
             type="image/svg+xml"
-        />
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="preload"
-            as="style"
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         />
 
         <!-- Sitemap & Discovery -->
@@ -101,9 +89,7 @@ const structuredData = [
         ))}
     </head>
     <body>
-        <div class="max-w-3xl mx-auto md:px-2">
-            <slot />
-        </div>
+        <slot />
         <script>
             if (navigator && "modelContext" in navigator) {
                 (navigator as any).modelContext.provideContext({
