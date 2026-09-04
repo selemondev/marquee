@@ -7,10 +7,10 @@ defineProps<Testimonial>();
 
 <template>
   <div
-    class="flex h-52 w-80 flex-col gap-3 rounded-lg border border-line bg-[#111113] px-5 py-4 text-sm"
+    class="flex h-52 w-80 flex-col gap-3 rounded-lg border border-line bg-card px-5 py-4 text-sm"
   >
     <div class="flex items-center gap-3">
-      <img :src="avatar" alt="" loading="lazy" class="size-9 rounded-full ring-1 ring-white/10" />
+      <img :src="avatar" alt="" loading="lazy" class="size-9 rounded-full ring-1 ring-fg/10" />
       <div>
         <div class="font-medium">{{ name }}</div>
         <div class="text-xs text-muted">{{ title }}</div>

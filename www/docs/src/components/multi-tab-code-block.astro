@@ -11,7 +11,7 @@ const { label, tabs } = Astro.props;
 const entries = Object.entries(tabs);
 ---
 
-<div class="overflow-hidden rounded-lg border border-line bg-[#0d0d0f]" data-tabs>
+<div class="overflow-hidden rounded-lg border border-line bg-code" data-tabs>
     <div class="flex items-center gap-1 border-b border-line px-2 py-1.5" role="tablist" aria-label={label}>
         {
             entries.map(([name], i) => (
@@ -20,7 +20,7 @@ const entries = Object.entries(tabs);
                     role="tab"
                     aria-selected={i === 0}
                     data-tab={name}
-                    class="rounded-md px-2.5 py-1 font-mono text-xs text-muted transition-colors hover:bg-white/5 hover:text-fg aria-selected:bg-white/8 aria-selected:text-fg"
+                    class="rounded-md px-2.5 py-1 font-mono text-xs text-muted transition-colors hover:bg-fg/5 hover:text-fg aria-selected:bg-fg/8 aria-selected:text-fg"
                 >
                     {name}
                 </button>

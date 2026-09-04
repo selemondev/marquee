@@ -9,7 +9,10 @@
   --color-fg: #ededef;
   --color-muted: #8f8f95;
   --color-line: rgb(255 255 255 / 0.1);
+  --color-line-strong: rgb(255 255 255 / 0.28);
   --color-surface: rgb(255 255 255 / 0.03);
+  --color-card: #111113;
+  --color-code: #0d0d0f;
   --color-accent: #42b883;
 }
 
@@ -25,7 +28,7 @@
   width: 7px;
   height: 7px;
   background: var(--color-bg);
-  border: 1px solid rgb(255 255 255 / 0.28);
+  border: 1px solid var(--color-line-strong);
   transform: translate(-50%, -50%);
 }
 
