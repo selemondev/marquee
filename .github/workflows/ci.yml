@@ -24,7 +24,7 @@ jobs:
         uses: pnpm/action-setup@v6
 
       - name: Set node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
@@ -52,7 +52,7 @@ jobs:
         uses: pnpm/action-setup@v6
 
       - name: Set node ${{ matrix.node }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
 
