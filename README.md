@@ -116,4 +116,4 @@ The component styles ship in the `components` cascade layer, so your own utiliti
 
 ## License
 
-Released under [MIT](/LICENSE) by [@selemondev](https://github.com/selemondev).
+Released under [MIT](/LICENSE) by [Selemon Brahanu](https://selemon.dev).
